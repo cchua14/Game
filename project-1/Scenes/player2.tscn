@@ -98,6 +98,7 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_sapwk"]
 
 [node name="Player2" type="Node2D"]
+scale = Vector2(0.6, 0.6)
 
 [node name="Player2" type="CharacterBody2D" parent="."]
 script = ExtResource("1_x88p5")

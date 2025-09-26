@@ -99,6 +99,7 @@ animations = [{
 }]
 
 [node name="Player1" type="Node2D"]
+scale = Vector2(0.6, 0.6)
 
 [node name="Character 1" type="CharacterBody2D" parent="."]
 script = ExtResource("1_n5fpy")
