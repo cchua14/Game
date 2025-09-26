@@ -98,17 +98,17 @@ animations = [{
 "speed": 20.0
 }]
 
-[node name="Player1" type="Node"]
+[node name="Player1" type="Node2D"]
 
 [node name="Character 1" type="CharacterBody2D" parent="."]
 script = ExtResource("1_n5fpy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Character 1"]
-position = Vector2(101, 98)
+position = Vector2(-1, 0)
 shape = SubResource("CircleShape2D_n5fpy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Character 1"]
-position = Vector2(101, 97)
+position = Vector2(7.6293945e-06, -1)
 scale = Vector2(1.1875, 1.125)
 sprite_frames = SubResource("SpriteFrames_bihrp")
 autoplay = "default"
