@@ -98,7 +98,7 @@ animations = [{
 "speed": 20.0
 }]
 
-[node name="Node" type="Node"]
+[node name="Player1" type="Node"]
 
 [node name="Character 1" type="CharacterBody2D" parent="."]
 script = ExtResource("1_n5fpy")

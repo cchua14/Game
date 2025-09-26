@@ -13,7 +13,7 @@ position = Vector2(100, 403)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource("WorldBoundaryShape2D_fsi4c")
 
-[node name="Node" parent="." instance=ExtResource("1_1h0rl")]
+[node name="Player1" parent="." instance=ExtResource("1_1h0rl")]
 
-[node name="Node2D" parent="." instance=ExtResource("2_sijdd")]
-position = Vector2(147, 118)
+[node name="Player2" parent="." instance=ExtResource("2_sijdd")]
+position = Vector2(146, 101)
