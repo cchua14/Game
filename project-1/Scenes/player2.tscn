@@ -1,6 +1,7 @@
-[gd_scene load_steps=16 format=3 uid="uid://cewpm1m6sn8r6"]
+[gd_scene load_steps=17 format=3 uid="uid://cewpm1m6sn8r6"]
 
 [ext_resource type="Texture2D" uid="uid://dulx43uffegih" path="res://Asset/Pixel Adventure 1/Free/Main Characters/Virtual Guy/Run (32x32).png" id="1_b30ec"]
+[ext_resource type="Script" uid="uid://chl733pdtrp6u" path="res://Scripts/player_2.gd" id="1_x88p5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x88p5"]
 atlas = ExtResource("1_b30ec")
@@ -99,9 +100,11 @@ animations = [{
 [node name="Node2D" type="Node2D"]
 
 [node name="Player2" type="CharacterBody2D" parent="."]
+script = ExtResource("1_x88p5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player2"]
 sprite_frames = SubResource("SpriteFrames_csrft")
+autoplay = "default"
 frame = 8
 frame_progress = 0.94047815
 

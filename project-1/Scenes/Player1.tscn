@@ -1,5 +1,6 @@
-[gd_scene load_steps=16 format=3 uid="uid://bxv830x557hr4"]
+[gd_scene load_steps=17 format=3 uid="uid://bxv830x557hr4"]
 
+[ext_resource type="Script" uid="uid://dua3nayhssvnk" path="res://Scripts/character_1.gd" id="1_n5fpy"]
 [ext_resource type="Texture2D" uid="uid://ccostvj2mufiy" path="res://Asset/Pixel Adventure 1/Free/Main Characters/Ninja Frog/Run (32x32).png" id="1_nlwqd"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_n5fpy"]
@@ -100,6 +101,7 @@ animations = [{
 [node name="Node" type="Node"]
 
 [node name="Character 1" type="CharacterBody2D" parent="."]
+script = ExtResource("1_n5fpy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Character 1"]
 position = Vector2(101, 98)
@@ -109,5 +111,6 @@ shape = SubResource("CircleShape2D_n5fpy")
 position = Vector2(101, 97)
 scale = Vector2(1.1875, 1.125)
 sprite_frames = SubResource("SpriteFrames_bihrp")
+autoplay = "default"
 frame = 9
 frame_progress = 0.6190466
