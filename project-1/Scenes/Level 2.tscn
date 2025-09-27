@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://c7l4ecr682oqp"]
+
+[ext_resource type="Texture2D" uid="uid://c7qkmj040syqd" path="res://Asset/Pixel Adventure 1/Free/Traps/Falling Platforms/On (32x10).png" id="1_fmc1q"]
+[ext_resource type="Script" uid="uid://w6i4ad4my1e7" path="res://on.gd" id="2_i7f56"]
+[ext_resource type="Texture2D" uid="uid://dgsx3oex77vfl" path="res://Asset/Pixel Adventure 1/Free/Traps/Falling Platforms/Off.png" id="3_552vg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rxdjg"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Falling trap" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Falling trap"]
+shape = SubResource("RectangleShape2D_rxdjg")
+
+[node name="On" type="Sprite2D" parent="Falling trap"]
+position = Vector2(65, 40)
+texture = ExtResource("1_fmc1q")
+script = ExtResource("2_i7f56")
+
+[node name="Off" type="Sprite2D" parent="Falling trap"]
+position = Vector2(73, 78)
+texture = ExtResource("3_552vg")
