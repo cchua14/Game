@@ -118,3 +118,4 @@ frame = 9
 frame_progress = 0.6190466
 
 [node name="Camera2D" type="Camera2D" parent="Character 1"]
+z_index = 5
