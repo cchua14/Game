@@ -1,6 +1,8 @@
-[gd_scene load_steps=16 format=3 uid="uid://c3a2al1qo5rk6"]
+[gd_scene load_steps=18 format=3 uid="uid://c3a2al1qo5rk6"]
 
 [ext_resource type="Texture2D" uid="uid://dtpyt7mns7atl" path="res://Asset/brackeys_platformer_assets/sprites/coin.png" id="1_2qo34"]
+[ext_resource type="Script" uid="uid://p8yrt7no3gnk" path="res://Scripts/coin_script_level2_only.gd" id="1_g537i"]
+[ext_resource type="AudioStream" uid="uid://ccfkbmm7rwjhx" path="res://Asset/brackeys_platformer_assets/sounds/coin.wav" id="3_h2p6v"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jgi06"]
 atlas = ExtResource("1_2qo34")
@@ -95,14 +97,26 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m55n1"]
-radius = 5.0
+radius = 7.0
 
-[node name="Area2D" type="Area2D"]
+[node name="coin" type="Area2D"]
+z_index = 2
+collision_mask = 2
+script = ExtResource("1_g537i")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_qtgto")
 autoplay = "default"
-frame_progress = 0.63758755
+frame_progress = 0.8531091
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_m55n1")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_h2p6v")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.2
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
