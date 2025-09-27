@@ -19,11 +19,6 @@ config/icon="res://icon.svg"
 
 Player2="*res://Scripts/player_2.gd"
 
-[display]
-
-window/size/viewport_width=1600
-window/size/viewport_height=960
-
 [input]
 
 "Jump(W) player1 "={
