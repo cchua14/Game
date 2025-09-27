@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dm1pvknqpqmgw"]
+
+[ext_resource type="Script" uid="uid://dkwsvyrtqdk5n" path="res://triangle.gd" id="1_slq2e"]
+[ext_resource type="Texture2D" uid="uid://cmbhyv3jt5b0w" path="res://Asset/Pixel Adventure 1/Free/Traps/Spikes/Idle.png" id="2_bd4v1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_55lpa"]
+size = Vector2(16, 20)
+
+[node name="Triangle" type="Area2D"]
+script = ExtResource("1_slq2e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 0)
+shape = SubResource("RectangleShape2D_55lpa")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_bd4v1")
