@@ -72,14 +72,14 @@ radius = 14.035668
 
 [node name="skull" type="StaticBody2D"]
 z_index = 2
-scale = Vector2(0.7, 0.7)
+scale = Vector2(0.5, 0.5)
 collision_mask = 2
 script = ExtResource("1_t44v2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_7y606")
 autoplay = "default"
-frame_progress = 0.92761606
+frame_progress = 0.30072483
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_mask = 2
