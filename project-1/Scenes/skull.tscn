@@ -1,0 +1,91 @@
+[gd_scene load_steps=13 format=3 uid="uid://c8vv8jgfyh03v"]
+
+[ext_resource type="Texture2D" uid="uid://mptoa0t08xv0" path="res://Asset/Pixel Adventure 2/Enemies/Skull/Idle 2 (52x54).png" id="1_gx2ma"]
+[ext_resource type="Script" uid="uid://c4jl2acyxgins" path="res://Scripts/skull.gd" id="1_t44v2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t44v2"]
+atlas = ExtResource("1_gx2ma")
+region = Rect2(0, 0, 52, 54)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6bgmt"]
+atlas = ExtResource("1_gx2ma")
+region = Rect2(52, 0, 52, 54)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hcoa0"]
+atlas = ExtResource("1_gx2ma")
+region = Rect2(104, 0, 52, 54)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vjweu"]
+atlas = ExtResource("1_gx2ma")
+region = Rect2(156, 0, 52, 54)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ruoq"]
+atlas = ExtResource("1_gx2ma")
+region = Rect2(208, 0, 52, 54)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bt6fs"]
+atlas = ExtResource("1_gx2ma")
+region = Rect2(260, 0, 52, 54)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vqigx"]
+atlas = ExtResource("1_gx2ma")
+region = Rect2(312, 0, 52, 54)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_moowi"]
+atlas = ExtResource("1_gx2ma")
+region = Rect2(364, 0, 52, 54)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7y606"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t44v2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6bgmt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hcoa0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vjweu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ruoq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bt6fs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vqigx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_moowi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mvu15"]
+radius = 14.035668
+
+[node name="skull" type="StaticBody2D"]
+z_index = 2
+scale = Vector2(0.7, 0.7)
+collision_mask = 2
+script = ExtResource("1_t44v2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_7y606")
+autoplay = "default"
+frame_progress = 0.92761606
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_mvu15")
+
+[connection signal="child_entered_tree" from="." to="." method="_on_child_entered_tree"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
