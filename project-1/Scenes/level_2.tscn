@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=4 uid="uid://cvm3728aqjnvb"]
+[gd_scene load_steps=68 format=4 uid="uid://cvm3728aqjnvb"]
 
 [ext_resource type="Script" uid="uid://g6bnw1wlkljl" path="res://Scripts/main2.gd" id="1_hj5x7"]
 [ext_resource type="Texture2D" uid="uid://b8iax7lrq50p3" path="res://Asset/Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="2_1q6tm"]
@@ -17,10 +17,11 @@
 [ext_resource type="Texture2D" uid="uid://cmbhyv3jt5b0w" path="res://Asset/Pixel Adventure 1/Free/Traps/Spikes/Idle.png" id="10_bl0du"]
 [ext_resource type="Texture2D" uid="uid://cv5ykqfoh78u" path="res://Asset/Pixel Adventure 1/Free/Background/Brown.png" id="11_i6dbo"]
 [ext_resource type="Script" uid="uid://bpatggjsngrhs" path="res://Scripts/spike_killzone.gd" id="15_q0ycs"]
+[ext_resource type="Script" uid="uid://xnrfa4epx0mn" path="res://Scripts/fire_trap_cc.gd" id="16_c5xoi"]
 [ext_resource type="PackedScene" uid="uid://c8vv8jgfyh03v" path="res://Scenes/skull.tscn" id="16_hj5x7"]
-[ext_resource type="PackedScene" uid="uid://6lyuwgo3d6bs" path="res://Scenes/saw.tscn" id="17_yvrk7"]
 [ext_resource type="PackedScene" uid="uid://c3a2al1qo5rk6" path="res://Scenes/scene2 coin.tscn" id="19_e2piv"]
 [ext_resource type="AudioStream" uid="uid://bacwj4yjcbrv7" path="res://Asset/field_theme_1.wav" id="20_e2piv"]
+[ext_resource type="PackedScene" uid="uid://d2mb1wg1m0n6j" path="res://Scenes/saw lv2.tscn" id="21_ijtdf"]
 
 [sub_resource type="Animation" id="Animation_2mgoq"]
 length = 0.001
@@ -1073,7 +1074,7 @@ autoplay = "Move up"
 position = Vector2(-745, 424)
 
 [node name="Player1" parent="Players" instance=ExtResource("3_v36qu")]
-position = Vector2(-793, 419)
+position = Vector2(-46, -202)
 
 [node name="Camera2D" type="Camera2D" parent="Players/Player1"]
 position = Vector2(1.666626, 6.666626)
@@ -1149,78 +1150,103 @@ shape = SubResource("RectangleShape2D_055b2")
 
 [node name="Fire_trap" parent="Firetrap" instance=ExtResource("9_uhnj4")]
 position = Vector2(649, 433)
+script = ExtResource("16_c5xoi")
 
 [node name="Fire_trap2" parent="Firetrap" instance=ExtResource("9_uhnj4")]
 position = Vector2(669, 433)
+script = ExtResource("16_c5xoi")
 
 [node name="Fire_trap3" parent="Firetrap" instance=ExtResource("9_uhnj4")]
 position = Vector2(688, 433)
+script = ExtResource("16_c5xoi")
 
 [node name="Fire_trap4" parent="Firetrap" instance=ExtResource("9_uhnj4")]
 position = Vector2(708, 433)
+script = ExtResource("16_c5xoi")
 
 [node name="Fire_trap5" parent="Firetrap" instance=ExtResource("9_uhnj4")]
 position = Vector2(728, 433)
+script = ExtResource("16_c5xoi")
 
 [node name="Fire_trap6" parent="Firetrap" instance=ExtResource("9_uhnj4")]
 position = Vector2(748, 433)
+script = ExtResource("16_c5xoi")
 
 [node name="Fire_trap7" parent="Firetrap" instance=ExtResource("9_uhnj4")]
 position = Vector2(768, 433)
+script = ExtResource("16_c5xoi")
 
 [node name="Fire_trap8" parent="Firetrap" instance=ExtResource("9_uhnj4")]
 position = Vector2(787, 433)
+script = ExtResource("16_c5xoi")
 
 [node name="Fire_trap9" parent="Firetrap" instance=ExtResource("9_uhnj4")]
 position = Vector2(807, 433)
+script = ExtResource("16_c5xoi")
 
 [node name="Fire_trap10" parent="Firetrap" instance=ExtResource("9_uhnj4")]
 position = Vector2(826, 432)
+script = ExtResource("16_c5xoi")
 
 [node name="Fire_trap11" parent="Firetrap" instance=ExtResource("9_uhnj4")]
 position = Vector2(846, 432)
+script = ExtResource("16_c5xoi")
 
 [node name="Fire_trap12" parent="Firetrap" instance=ExtResource("9_uhnj4")]
 position = Vector2(866, 432)
+script = ExtResource("16_c5xoi")
 
 [node name="Fire_trap13" parent="Firetrap" instance=ExtResource("9_uhnj4")]
 position = Vector2(887, 432)
+script = ExtResource("16_c5xoi")
 
 [node name="Fire_trap14" parent="Firetrap" instance=ExtResource("9_uhnj4")]
 position = Vector2(907, 432)
+script = ExtResource("16_c5xoi")
 
 [node name="Fire_trap15" parent="Firetrap" instance=ExtResource("9_uhnj4")]
 position = Vector2(928, 432)
+script = ExtResource("16_c5xoi")
 
 [node name="Fire_trap16" parent="Firetrap" instance=ExtResource("9_uhnj4")]
 position = Vector2(949, 432)
+script = ExtResource("16_c5xoi")
 
 [node name="Fire_trap17" parent="Firetrap" instance=ExtResource("9_uhnj4")]
 position = Vector2(969, 432)
+script = ExtResource("16_c5xoi")
 
 [node name="Fire_trap18" parent="Firetrap" instance=ExtResource("9_uhnj4")]
 position = Vector2(990, 432)
+script = ExtResource("16_c5xoi")
 
 [node name="Fire_trap19" parent="Firetrap" instance=ExtResource("9_uhnj4")]
 position = Vector2(1010, 432)
+script = ExtResource("16_c5xoi")
 
 [node name="Fire_trap20" parent="Firetrap" instance=ExtResource("9_uhnj4")]
 position = Vector2(1031, 432)
+script = ExtResource("16_c5xoi")
 
 [node name="Fire_trap21" parent="Firetrap" instance=ExtResource("9_uhnj4")]
 position = Vector2(1052, 432)
+script = ExtResource("16_c5xoi")
 
 [node name="Fire_trap22" parent="Firetrap" instance=ExtResource("9_uhnj4")]
 position = Vector2(1072, 432)
+script = ExtResource("16_c5xoi")
 
 [node name="Fire_trap23" parent="Firetrap" instance=ExtResource("9_uhnj4")]
 position = Vector2(1092, 432)
+script = ExtResource("16_c5xoi")
 
 [node name="Fire_trap24" parent="Firetrap" instance=ExtResource("9_uhnj4")]
 position = Vector2(1113, 432)
+script = ExtResource("16_c5xoi")
 
 [node name="Fire_trap25" parent="Firetrap" instance=ExtResource("9_uhnj4")]
 position = Vector2(1131, 432)
+script = ExtResource("16_c5xoi")
 
 [node name="level_finish" type="Area2D" parent="."]
 position = Vector2(-1905, 349)
@@ -1326,74 +1352,6 @@ libraries = {
 }
 autoplay = "move"
 
-[node name="Saw" type="Node" parent="."]
-
-[node name="saw" parent="Saw" instance=ExtResource("17_yvrk7")]
-position = Vector2(-145, -160)
-
-[node name="saw2" parent="Saw" instance=ExtResource("17_yvrk7")]
-position = Vector2(-235, -157)
-
-[node name="saw3" parent="Saw" instance=ExtResource("17_yvrk7")]
-position = Vector2(-327, -162)
-
-[node name="saw4" parent="Saw" instance=ExtResource("17_yvrk7")]
-position = Vector2(-421, -164)
-
-[node name="saw5" parent="Saw" instance=ExtResource("17_yvrk7")]
-position = Vector2(-91, -114)
-
-[node name="saw6" parent="Saw" instance=ExtResource("17_yvrk7")]
-position = Vector2(-195, -80)
-
-[node name="saw7" parent="Saw" instance=ExtResource("17_yvrk7")]
-position = Vector2(-343, -72)
-
-[node name="saw8" parent="Saw" instance=ExtResource("17_yvrk7")]
-position = Vector2(-427, -75)
-
-[node name="saw9" parent="Saw" instance=ExtResource("17_yvrk7")]
-position = Vector2(-254, -37)
-
-[node name="saw10" parent="Saw" instance=ExtResource("17_yvrk7")]
-position = Vector2(-374, -115)
-
-[node name="saw11" parent="Saw" instance=ExtResource("17_yvrk7")]
-position = Vector2(-279, -102)
-
-[node name="saw12" parent="Saw" instance=ExtResource("17_yvrk7")]
-position = Vector2(-111, -33)
-
-[node name="saw13" parent="Saw" instance=ExtResource("17_yvrk7")]
-position = Vector2(-176, -18)
-
-[node name="saw14" parent="Saw" instance=ExtResource("17_yvrk7")]
-position = Vector2(-391, -27)
-
-[node name="saw15" parent="Saw" instance=ExtResource("17_yvrk7")]
-position = Vector2(-447, -19)
-
-[node name="saw16" parent="Saw" instance=ExtResource("17_yvrk7")]
-position = Vector2(-316, -41)
-
-[node name="saw17" parent="Saw" instance=ExtResource("17_yvrk7")]
-position = Vector2(-139, -78)
-
-[node name="saw18" parent="Saw" instance=ExtResource("17_yvrk7")]
-position = Vector2(-199, -132)
-
-[node name="saw19" parent="Saw" instance=ExtResource("17_yvrk7")]
-position = Vector2(-108, -207)
-
-[node name="saw20" parent="Saw" instance=ExtResource("17_yvrk7")]
-position = Vector2(-199, -198)
-
-[node name="saw21" parent="Saw" instance=ExtResource("17_yvrk7")]
-position = Vector2(-379, -211)
-
-[node name="saw22" parent="Saw" instance=ExtResource("17_yvrk7")]
-position = Vector2(-282, -202)
-
 [node name="gold_coin" type="Node" parent="."]
 
 [node name="coin" parent="gold_coin" instance=ExtResource("19_e2piv")]
@@ -1429,6 +1387,65 @@ position = Vector2(951, -128)
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("20_e2piv")
 autoplay = true
+
+[node name="Saw" type="Node" parent="."]
+
+[node name="saw" parent="Saw" instance=ExtResource("21_ijtdf")]
+position = Vector2(-424, -186)
+
+[node name="saw2" parent="Saw" instance=ExtResource("21_ijtdf")]
+position = Vector2(-443, -132)
+
+[node name="saw3" parent="Saw" instance=ExtResource("21_ijtdf")]
+position = Vector2(-416, -74)
+
+[node name="saw4" parent="Saw" instance=ExtResource("21_ijtdf")]
+position = Vector2(-340, -39)
+
+[node name="saw5" parent="Saw" instance=ExtResource("21_ijtdf")]
+position = Vector2(-262, -57)
+
+[node name="saw6" parent="Saw" instance=ExtResource("21_ijtdf")]
+position = Vector2(-357, -98)
+
+[node name="saw7" parent="Saw" instance=ExtResource("21_ijtdf")]
+position = Vector2(-367, -149)
+
+[node name="saw8" parent="Saw" instance=ExtResource("21_ijtdf")]
+position = Vector2(-291, -99)
+
+[node name="saw9" parent="Saw" instance=ExtResource("21_ijtdf")]
+position = Vector2(-200, -41)
+
+[node name="saw10" parent="Saw" instance=ExtResource("21_ijtdf")]
+position = Vector2(-213, -96)
+
+[node name="saw11" parent="Saw" instance=ExtResource("21_ijtdf")]
+position = Vector2(-432, -22)
+
+[node name="saw12" parent="Saw" instance=ExtResource("21_ijtdf")]
+position = Vector2(-112, -179)
+
+[node name="saw13" parent="Saw" instance=ExtResource("21_ijtdf")]
+position = Vector2(-316, -198)
+
+[node name="saw14" parent="Saw" instance=ExtResource("21_ijtdf")]
+position = Vector2(-254, -144)
+
+[node name="saw15" parent="Saw" instance=ExtResource("21_ijtdf")]
+position = Vector2(-208, -195)
+
+[node name="saw16" parent="Saw" instance=ExtResource("21_ijtdf")]
+position = Vector2(-162, -143)
+
+[node name="saw17" parent="Saw" instance=ExtResource("21_ijtdf")]
+position = Vector2(-145, -59)
+
+[node name="saw18" parent="Saw" instance=ExtResource("21_ijtdf")]
+position = Vector2(-106, -110)
+
+[node name="saw19" parent="Saw" instance=ExtResource("21_ijtdf")]
+position = Vector2(-287, -15)
 
 [connection signal="pressed" from="Players/Player1/Camera2D/Reset" to="Players/Player1/Camera2D/Reset" method="_on_pressed"]
 [connection signal="pressed" from="Players/Player1/Camera2D/Reset" to="Map/Lava_killzone" method="_on_button_pressed"]
