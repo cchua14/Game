@@ -118,8 +118,5 @@ autoplay = "default"
 frame = 9
 frame_progress = 0.6190466
 
-[node name="Camera2D" type="Camera2D" parent="Character 1"]
-z_index = 5
-
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Character 1"]
 stream = ExtResource("3_dvont")
