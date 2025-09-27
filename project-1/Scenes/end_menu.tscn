@@ -1,0 +1,139 @@
+[gd_scene load_steps=18 format=3 uid="uid://bgrw414pqu3tf"]
+
+[ext_resource type="Texture2D" uid="uid://cv5ykqfoh78u" path="res://Asset/Pixel Adventure 1/Free/Background/Brown.png" id="1_rrpri"]
+[ext_resource type="Texture2D" uid="uid://dg5a4l2qmgrj2" path="res://Asset/Pixel Adventure 1/Free/Main Characters/Virtual Guy/Hit (32x32).png" id="2_tx7ng"]
+[ext_resource type="FontFile" uid="uid://lj733rg3xpgd" path="res://Asset/brackeys_platformer_assets/fonts/PixelOperator8-Bold.ttf" id="3_77tpm"]
+[ext_resource type="FontFile" uid="uid://cau82t1dyajnn" path="res://Asset/brackeys_platformer_assets/fonts/PixelOperator8.ttf" id="3_e214x"]
+[ext_resource type="Script" uid="uid://b4b7l01bnwemh" path="res://Scripts/return to menu.gd" id="5_tx7ng"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vp12d"]
+atlas = ExtResource("2_tx7ng")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_stov7"]
+atlas = ExtResource("2_tx7ng")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g6dhs"]
+atlas = ExtResource("2_tx7ng")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3lnff"]
+atlas = ExtResource("2_tx7ng")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nrx1w"]
+atlas = ExtResource("2_tx7ng")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ujcg"]
+atlas = ExtResource("2_tx7ng")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f6p23"]
+atlas = ExtResource("2_tx7ng")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1sm3s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vp12d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_stov7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g6dhs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3lnff")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nrx1w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ujcg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f6p23")
+}],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e214x"]
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_77tpm"]
+bg_color = Color(0.23031491, 0.23031494, 0.23031485, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tx7ng"]
+bg_color = Color(0.43904907, 0.43904915, 0.43904895, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e214x"]
+
+[node name="End menu" type="Node2D"]
+scale = Vector2(0.42340976, 0.41701818)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(28.34134, -139.08267)
+scale = Vector2(-43.40115, 44.38418)
+texture = ExtResource("1_rrpri")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 3
+position = Vector2(-129.99998, -332)
+scale = Vector2(137.44287, 104.726204)
+sprite_frames = SubResource("SpriteFrames_1sm3s")
+autoplay = "default"
+frame = 4
+frame_progress = 0.5653782
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(33.064896, -306.94104)
+scale = Vector2(0.58643484, 0.7207586)
+zoom = Vector2(0.98, 0.66)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+z_index = 3
+offset_left = -1213.9541
+offset_top = -1460.3678
+offset_right = 211.78247
+offset_bottom = -1321.1792
+scale = Vector2(2.2830846, 4.5371375)
+theme_override_fonts/normal_font = ExtResource("3_e214x")
+theme_override_font_sizes/normal_font_size = 60
+bbcode_enabled = true
+text = "[rainbow][wave]Congradulations!
+You've finished the game!
+"
+
+[node name="Button" type="Button" parent="."]
+z_index = 3
+offset_left = -937.626
+offset_top = 194.23615
+offset_right = 99.37402
+offset_bottom = 255.23615
+scale = Vector2(1.9411025, 4.7104783)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_77tpm")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_e214x")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_77tpm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_tx7ng")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_e214x")
+text = "Return to Main Menu"
+script = ExtResource("5_tx7ng")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

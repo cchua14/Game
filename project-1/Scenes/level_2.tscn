@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=4 uid="uid://cvm3728aqjnvb"]
+[gd_scene load_steps=70 format=4 uid="uid://cvm3728aqjnvb"]
 
 [ext_resource type="Script" uid="uid://g6bnw1wlkljl" path="res://Scripts/main2.gd" id="1_hj5x7"]
 [ext_resource type="Texture2D" uid="uid://b8iax7lrq50p3" path="res://Asset/Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="2_1q6tm"]
@@ -19,9 +19,11 @@
 [ext_resource type="Script" uid="uid://bpatggjsngrhs" path="res://Scripts/spike_killzone.gd" id="15_q0ycs"]
 [ext_resource type="Script" uid="uid://xnrfa4epx0mn" path="res://Scripts/fire_trap_cc.gd" id="16_c5xoi"]
 [ext_resource type="PackedScene" uid="uid://c8vv8jgfyh03v" path="res://Scenes/skull.tscn" id="16_hj5x7"]
+[ext_resource type="Script" uid="uid://d4naq3gett1md" path="res://Scripts/finish level 2.gd" id="17_4k5rq"]
 [ext_resource type="PackedScene" uid="uid://c3a2al1qo5rk6" path="res://Scenes/scene2 coin.tscn" id="19_e2piv"]
 [ext_resource type="AudioStream" uid="uid://bacwj4yjcbrv7" path="res://Asset/field_theme_1.wav" id="20_e2piv"]
 [ext_resource type="PackedScene" uid="uid://d2mb1wg1m0n6j" path="res://Scenes/saw lv2.tscn" id="21_ijtdf"]
+[ext_resource type="FontFile" uid="uid://cau82t1dyajnn" path="res://Asset/brackeys_platformer_assets/fonts/PixelOperator8.ttf" id="23_sfey3"]
 
 [sub_resource type="Animation" id="Animation_2mgoq"]
 length = 0.001
@@ -1251,6 +1253,7 @@ script = ExtResource("16_c5xoi")
 [node name="level_finish" type="Area2D" parent="."]
 position = Vector2(-1905, 349)
 scale = Vector2(1.2208235, 1.1657999)
+script = ExtResource("17_4k5rq")
 
 [node name="Sprite2D" type="Sprite2D" parent="level_finish"]
 position = Vector2(912.4988, -465.77463)
@@ -1447,9 +1450,23 @@ position = Vector2(-106, -110)
 [node name="saw19" parent="Saw" instance=ExtResource("21_ijtdf")]
 position = Vector2(-287, -15)
 
+[node name="Label" type="Label" parent="."]
+z_index = 2
+offset_left = -808.0
+offset_top = 148.0
+offset_right = 1092.0
+offset_bottom = 231.0
+scale = Vector2(0.24000244, 0.36000064)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("23_sfey3")
+theme_override_font_sizes/font_size = 60
+text = "Get at least 9 coins to pass to next level"
+
 [connection signal="pressed" from="Players/Player1/Camera2D/Reset" to="Players/Player1/Camera2D/Reset" method="_on_pressed"]
 [connection signal="pressed" from="Players/Player1/Camera2D/Reset" to="Map/Lava_killzone" method="_on_button_pressed"]
 [connection signal="body_entered" from="Map/Lava_killzone" to="Map/Lava_killzone" method="_on_body_entered"]
+[connection signal="body_entered" from="level_finish" to="." method="_on_level_finish_body_entered"]
+[connection signal="body_entered" from="level_finish" to="level_finish" method="_on_body_entered"]
 [connection signal="body_entered" from="Spike killzone/spike_killzone" to="Spike killzone/spike_killzone" method="_on_body_entered"]
 [connection signal="body_entered" from="Spike killzone/spike_killzone2" to="Spike killzone/spike_killzone2" method="_on_body_entered"]
 [connection signal="body_entered" from="Spike killzone/spike_killzone4" to="Spike killzone/spike_killzone4" method="_on_body_entered"]
