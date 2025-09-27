@@ -102,6 +102,7 @@ animations = [{
 scale = Vector2(0.6, 0.6)
 
 [node name="Character 1" type="CharacterBody2D" parent="."]
+collision_layer = 2
 script = ExtResource("1_n5fpy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Character 1"]
@@ -115,3 +116,5 @@ sprite_frames = SubResource("SpriteFrames_bihrp")
 autoplay = "default"
 frame = 9
 frame_progress = 0.6190466
+
+[node name="Camera2D" type="Camera2D" parent="Character 1"]

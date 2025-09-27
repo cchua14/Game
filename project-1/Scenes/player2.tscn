@@ -101,6 +101,7 @@ animations = [{
 scale = Vector2(0.6, 0.6)
 
 [node name="Player2" type="CharacterBody2D" parent="."]
+collision_layer = 2
 script = ExtResource("1_x88p5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player2"]
@@ -112,3 +113,5 @@ frame_progress = 0.94047815
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player2"]
 position = Vector2(1, 0)
 shape = SubResource("CircleShape2D_sapwk")
+
+[node name="Camera2D" type="Camera2D" parent="Player2"]
