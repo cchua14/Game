@@ -1076,7 +1076,7 @@ autoplay = "Move up"
 position = Vector2(-745, 424)
 
 [node name="Player1" parent="Players" instance=ExtResource("3_v36qu")]
-position = Vector2(-46, -202)
+position = Vector2(-684, -147)
 
 [node name="Camera2D" type="Camera2D" parent="Players/Player1"]
 position = Vector2(1.666626, 6.666626)
@@ -1123,6 +1123,10 @@ theme_override_fonts/font = SubResource("FontFile_i6dbo")
 theme_override_font_sizes/font_size = 60
 text = "Number of Death:"
 script = ExtResource("9_ijtdf")
+
+[node name="coin" parent="Players" instance=ExtResource("19_e2piv")]
+position = Vector2(865.00006, 301)
+scale = Vector2(15.560283, 15.462403)
 
 [node name="Map" type="Node" parent="."]
 
@@ -1253,6 +1257,7 @@ script = ExtResource("16_c5xoi")
 [node name="level_finish" type="Area2D" parent="."]
 position = Vector2(-1905, 349)
 scale = Vector2(1.2208235, 1.1657999)
+collision_mask = 2
 script = ExtResource("17_4k5rq")
 
 [node name="Sprite2D" type="Sprite2D" parent="level_finish"]
@@ -1364,7 +1369,7 @@ position = Vector2(-784, 334)
 position = Vector2(-150, 388)
 
 [node name="coin3" parent="gold_coin" instance=ExtResource("19_e2piv")]
-position = Vector2(249, 415)
+position = Vector2(335, 302)
 
 [node name="coin4" parent="gold_coin" instance=ExtResource("19_e2piv")]
 position = Vector2(804, 174)
