@@ -1,22 +1,14 @@
-<<<<<<< HEAD
 [gd_scene load_steps=22 format=4 uid="uid://dcq5fdkvtumwt"]
-=======
-[gd_scene load_steps=25 format=4 uid="uid://dcq5fdkvtumwt"]
->>>>>>> ac39ecb987868101d762fe13145d25ce04ebbd8c
 
-[ext_resource type="Script" uid="uid://yq3d678ger3j" path="res://Scripts/lv1main.gd" id="1_nl2tp"]
+[ext_resource type="Script" path="res://Scripts/lv1main.gd" id="1_nl2tp"]
 [ext_resource type="Texture2D" uid="uid://behopkfrtc4u6" path="res://Asset/Pixel Adventure 1/Free/Background/Blue.png" id="1_s5dbj"]
 [ext_resource type="Texture2D" uid="uid://b8iax7lrq50p3" path="res://Asset/Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="2_15xax"]
 [ext_resource type="Texture2D" uid="uid://cmbhyv3jt5b0w" path="res://Asset/Pixel Adventure 1/Free/Traps/Spikes/Idle.png" id="3_rcgcn"]
 [ext_resource type="Script" uid="uid://bnkoovg0aq7gp" path="res://Scripts/killzone.gd" id="4_nl2tp"]
 [ext_resource type="PackedScene" uid="uid://bxv830x557hr4" path="res://Scenes/Player1.tscn" id="5_pvjn7"]
 [ext_resource type="PackedScene" uid="uid://bapbwpb67363v" path="res://Scenes/Fire_trap_CC.tscn" id="6_15xax"]
-[ext_resource type="Texture2D" uid="uid://bewg0c5xoa7t5" path="res://Asset/Pixel Adventure 1/Free/Menu/Buttons/Restart.png" id="7_52g8p"]
 [ext_resource type="PackedScene" uid="uid://6lyuwgo3d6bs" path="res://Scenes/saw.tscn" id="7_rcgcn"]
-[ext_resource type="Script" uid="uid://vivqwcss8oiv" path="res://Scripts/Reset_button_lv1.gd" id="8_hmodn"]
-[ext_resource type="Script" uid="uid://dovd3nkk5v86e" path="res://Scripts/fire_trap_lv1.gd" id="8_pvjn7"]
-[ext_resource type="Script" uid="uid://cdxpkgifkbitd" path="res://Scripts/coinlv1label.gd" id="9_hmodn"]
-[ext_resource type="Script" uid="uid://bk53pngghrpxa" path="res://Scripts/death_count.gd" id="10_4c2qx"]
+[ext_resource type="Script" path="res://Scripts/fire_trap_lv1.gd" id="8_pvjn7"]
 [ext_resource type="PackedScene" uid="uid://clm07h81bub77" path="res://Scenes/Mario.tscn" id="10_tu7vc"]
 [ext_resource type="PackedScene" path="res://Scenes/player2.tscn" id="11_cwq60"]
 
@@ -351,21 +343,6 @@ script/source = "extends TileMapLayer
 a = Vector2(-836, 3)
 b = Vector2(1053, -3)
 
-[sub_resource type="Animation" id="Animation_cwq60"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-318, -253)]
-}
-
 [sub_resource type="Animation" id="Animation_tu7vc"]
 resource_name = "move"
 length = 1.8
@@ -381,6 +358,21 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(-318, -253), Vector2(411.99994, -255)]
+}
+
+[sub_resource type="Animation" id="Animation_cwq60"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-318, -253)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_52g8p"]
@@ -424,40 +416,6 @@ limit_left = -809
 limit_top = -627
 limit_right = 1158
 limit_bottom = 538
-
-[node name="Button" type="Button" parent="Character 1/Camera2D"]
-offset_left = 4.9999995
-offset_top = -12.999998
-offset_right = 81.0
-offset_bottom = 18.000002
-scale = Vector2(0.31999755, 0.32)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 16
-text = "Reset"
-icon = ExtResource("7_52g8p")
-script = ExtResource("8_hmodn")
-
-[node name="Label" type="Label" parent="Character 1/Camera2D"]
-offset_left = 7.0
-offset_top = -3.0
-offset_right = 182.0
-offset_bottom = 80.0
-scale = Vector2(0.09837696, 0.07153778)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 60
-text = "Coins:"
-script = ExtResource("9_hmodn")
-
-[node name="Label2" type="Label" parent="Character 1/Camera2D"]
-offset_left = 7.0
-offset_top = 1.0
-offset_right = 199.0
-offset_bottom = 84.0
-scale = Vector2(0.09837696, 0.07153778)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 60
-text = "Death:"
-script = ExtResource("10_4c2qx")
 
 [node name="Fire_trap4" parent="." instance=ExtResource("6_15xax")]
 position = Vector2(579, 383)
@@ -862,5 +820,3 @@ autoplay = "move"
 position = Vector2(-780, 508)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
-[connection signal="pressed" from="Character 1/Camera2D/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Character 1/Camera2D/Button" to="Character 1/Camera2D/Button" method="_on_pressed"]
