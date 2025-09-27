@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://cvm3728aqjnvb"]
+[gd_scene load_steps=31 format=4 uid="uid://cvm3728aqjnvb"]
 
 [ext_resource type="Texture2D" uid="uid://behopkfrtc4u6" path="res://Asset/Pixel Adventure 1/Free/Background/Blue.png" id="1_12fag"]
 [ext_resource type="Texture2D" uid="uid://b8iax7lrq50p3" path="res://Asset/Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="2_1q6tm"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bo1swcn0orc30" path="res://Scenes/Platform.tscn" id="4_1q6tm"]
 [ext_resource type="Script" uid="uid://c5g2v8c3eau7q" path="res://Scripts/lava_killzone.gd" id="5_cggpd"]
 [ext_resource type="PackedScene" uid="uid://bqk2o5yyopduc" path="res://Scenes/big platform.tscn" id="7_055b2"]
+[ext_resource type="PackedScene" uid="uid://cewpm1m6sn8r6" path="res://Scenes/player2.tscn" id="8_2mgoq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cggpd"]
 texture = ExtResource("1_12fag")
@@ -614,7 +615,17 @@ tile_map_data = PackedByteArray("AADN/yAAAAAGAAIAAADN/x0AAAAGAAEAAADN/x4AAAAGAAE
 tile_set = SubResource("TileSet_uhnj4")
 
 [node name="Player1" parent="." instance=ExtResource("3_v36qu")]
-position = Vector2(55, 399)
+position = Vector2(-772, 438.00003)
+
+[node name="Camera2D" type="Camera2D" parent="Player1"]
+position = Vector2(1.666626, 6.666626)
+scale = Vector2(1.6666666, 1.6666666)
+zoom = Vector2(3, 3)
+limit_left = -837
+limit_top = -620
+limit_right = 1159
+limit_bottom = 533
+position_smoothing_enabled = true
 
 [node name="Platform" parent="." instance=ExtResource("4_1q6tm")]
 position = Vector2(-530, 441)
@@ -674,5 +685,8 @@ libraries = {
 &"": SubResource("AnimationLibrary_fhuy1")
 }
 autoplay = "move_up"
+
+[node name="Player2" parent="." instance=ExtResource("8_2mgoq")]
+position = Vector2(-787, 437)
 
 [connection signal="body_entered" from="Lava killzone (script needed)" to="Lava killzone (script needed)" method="_on_body_entered"]

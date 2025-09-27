@@ -15,6 +15,10 @@ run/main_scene="uid://bxv830x557hr4"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Player2="*res://Scripts/player_2.gd"
+
 [input]
 
 "Jump(W) player1 "={
