@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Project 1"
-run/main_scene="uid://bxv830x557hr4"
+run/main_scene="uid://cxbqmuwlm6n3a"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
 
