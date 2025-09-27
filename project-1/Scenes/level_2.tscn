@@ -18,7 +18,7 @@
 [ext_resource type="Script" uid="uid://bpatggjsngrhs" path="res://Scripts/spike_killzone.gd" id="15_q0ycs"]
 [ext_resource type="PackedScene" uid="uid://c8vv8jgfyh03v" path="res://Scenes/skull.tscn" id="16_hj5x7"]
 [ext_resource type="PackedScene" uid="uid://6lyuwgo3d6bs" path="res://Scenes/saw.tscn" id="17_yvrk7"]
-[ext_resource type="PackedScene" uid="uid://c3a2al1qo5rk6" path="res://Scenes/coin lv2.tscn" id="19_e2piv"]
+[ext_resource type="PackedScene" uid="uid://c3a2al1qo5rk6" path="res://Scenes/scene2 coin.tscn" id="19_e2piv"]
 
 [sub_resource type="Animation" id="Animation_2mgoq"]
 length = 0.001
