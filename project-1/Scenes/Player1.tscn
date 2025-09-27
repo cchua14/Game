@@ -1,7 +1,8 @@
-[gd_scene load_steps=17 format=3 uid="uid://bxv830x557hr4"]
+[gd_scene load_steps=18 format=3 uid="uid://bxv830x557hr4"]
 
 [ext_resource type="Script" uid="uid://dua3nayhssvnk" path="res://Scripts/character_1.gd" id="1_n5fpy"]
 [ext_resource type="Texture2D" uid="uid://ccostvj2mufiy" path="res://Asset/Pixel Adventure 1/Free/Main Characters/Ninja Frog/Run (32x32).png" id="1_nlwqd"]
+[ext_resource type="AudioStream" uid="uid://blxe6n1d3tjsy" path="res://Asset/brackeys_platformer_assets/sounds/jump.wav" id="3_dvont"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_n5fpy"]
 radius = 16.0
@@ -119,3 +120,6 @@ frame_progress = 0.6190466
 
 [node name="Camera2D" type="Camera2D" parent="Character 1"]
 z_index = 5
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Character 1"]
+stream = ExtResource("3_dvont")

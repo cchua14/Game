@@ -1,7 +1,8 @@
-[gd_scene load_steps=17 format=3 uid="uid://cewpm1m6sn8r6"]
+[gd_scene load_steps=18 format=3 uid="uid://cewpm1m6sn8r6"]
 
 [ext_resource type="Texture2D" uid="uid://dulx43uffegih" path="res://Asset/Pixel Adventure 1/Free/Main Characters/Virtual Guy/Run (32x32).png" id="1_b30ec"]
 [ext_resource type="Script" uid="uid://chl733pdtrp6u" path="res://Scripts/player_2.gd" id="1_x88p5"]
+[ext_resource type="AudioStream" uid="uid://blxe6n1d3tjsy" path="res://Asset/brackeys_platformer_assets/sounds/jump.wav" id="3_udwdc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x88p5"]
 atlas = ExtResource("1_b30ec")
@@ -116,3 +117,6 @@ position = Vector2(1, 0)
 shape = SubResource("CircleShape2D_sapwk")
 
 [node name="Camera2D" type="Camera2D" parent="Player2"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Player2"]
+stream = ExtResource("3_udwdc")
