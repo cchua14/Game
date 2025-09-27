@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cewpm1m6sn8r6" path="res://Scenes/player2.tscn" id="8_2mgoq"]
 [ext_resource type="Script" uid="uid://ds11exybir13q" path="res://Scripts/button_restart.gd" id="8_bl0du"]
 [ext_resource type="Script" uid="uid://cvkntcplx0usl" path="res://Scripts/level2_coin_display.gd" id="8_fhuy1"]
-[ext_resource type="PackedScene" uid="uid://waxq1rnqqpyg" path="res://Scenes/Fire_trap_CC.tscn" id="9_uhnj4"]
+[ext_resource type="PackedScene" uid="uid://bapbwpb67363v" path="res://Scenes/Fire_trap_CC.tscn" id="9_uhnj4"]
 [ext_resource type="Texture2D" uid="uid://bkcjn7l6ia747" path="res://Asset/door.png" id="10_42uki"]
 [ext_resource type="Texture2D" uid="uid://cmbhyv3jt5b0w" path="res://Asset/Pixel Adventure 1/Free/Traps/Spikes/Idle.png" id="10_bl0du"]
 [ext_resource type="Texture2D" uid="uid://cv5ykqfoh78u" path="res://Asset/Pixel Adventure 1/Free/Background/Brown.png" id="11_i6dbo"]
