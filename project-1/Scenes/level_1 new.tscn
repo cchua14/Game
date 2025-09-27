@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://dcq5fdkvtumwt"]
+[gd_scene load_steps=14 format=4 uid="uid://dcq5fdkvtumwt"]
 
 [ext_resource type="Texture2D" uid="uid://behopkfrtc4u6" path="res://Asset/Pixel Adventure 1/Free/Background/Blue.png" id="1_s5dbj"]
 [ext_resource type="Texture2D" uid="uid://b8iax7lrq50p3" path="res://Asset/Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="2_15xax"]
@@ -6,14 +6,6 @@
 [ext_resource type="Script" uid="uid://bnkoovg0aq7gp" path="res://Scripts/killzone.gd" id="4_nl2tp"]
 [ext_resource type="PackedScene" uid="uid://bxv830x557hr4" path="res://Scenes/Player1.tscn" id="5_pvjn7"]
 [ext_resource type="PackedScene" uid="uid://bapbwpb67363v" path="res://Scenes/Fire_trap_CC.tscn" id="6_15xax"]
-
-[sub_resource type="GDScript" id="GDScript_pvjn7"]
-script/source = "extends Area2D
-
-
-func _on_body_entered(_body: Node2D) -> void:
-	get_tree().reload_current_scene()
-"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6444e"]
 texture = ExtResource("1_s5dbj")
@@ -347,7 +339,6 @@ a = Vector2(-836, 3)
 b = Vector2(1053, -3)
 
 [node name="level 1" type="Node2D"]
-script = SubResource("GDScript_pvjn7")
 
 [node name="Background" type="TileMapLayer" parent="."]
 z_index = -1
