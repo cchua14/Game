@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=4 uid="uid://cvm3728aqjnvb"]
+[gd_scene load_steps=64 format=4 uid="uid://cvm3728aqjnvb"]
 
 [ext_resource type="Texture2D" uid="uid://behopkfrtc4u6" path="res://Asset/Pixel Adventure 1/Free/Background/Blue.png" id="1_12fag"]
 [ext_resource type="Script" uid="uid://g6bnw1wlkljl" path="res://Scripts/level_2.gd" id="1_hj5x7"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bewg0c5xoa7t5" path="res://Asset/Pixel Adventure 1/Free/Menu/Buttons/Restart.png" id="7_vcilj"]
 [ext_resource type="PackedScene" uid="uid://cewpm1m6sn8r6" path="res://Scenes/player2.tscn" id="8_2mgoq"]
 [ext_resource type="Script" uid="uid://ds11exybir13q" path="res://Scripts/button_restart.gd" id="8_bl0du"]
+[ext_resource type="Script" uid="uid://cvkntcplx0usl" path="res://Scripts/level2_coin_display.gd" id="8_fhuy1"]
 [ext_resource type="PackedScene" uid="uid://waxq1rnqqpyg" path="res://Scenes/Fire_trap_CC.tscn" id="9_uhnj4"]
 [ext_resource type="Texture2D" uid="uid://bkcjn7l6ia747" path="res://Asset/door.png" id="10_42uki"]
 [ext_resource type="Texture2D" uid="uid://cmbhyv3jt5b0w" path="res://Asset/Pixel Adventure 1/Free/Traps/Spikes/Idle.png" id="10_bl0du"]
@@ -283,6 +284,123 @@ _data = {
 &"Move up": SubResource("Animation_v36qu"),
 &"RESET": SubResource("Animation_cggpd")
 }
+
+[sub_resource type="FontFile" id="FontFile_i6dbo"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/15/0/ascent = 0.0
+cache/0/15/0/descent = 0.0
+cache/0/15/0/underline_position = 0.0
+cache/0/15/0/underline_thickness = 0.0
+cache/0/15/0/scale = 1.0
+cache/0/14/0/ascent = 0.0
+cache/0/14/0/descent = 0.0
+cache/0/14/0/underline_position = 0.0
+cache/0/14/0/underline_thickness = 0.0
+cache/0/14/0/scale = 1.0
+cache/0/13/0/ascent = 0.0
+cache/0/13/0/descent = 0.0
+cache/0/13/0/underline_position = 0.0
+cache/0/13/0/underline_thickness = 0.0
+cache/0/13/0/scale = 1.0
+cache/0/12/0/ascent = 0.0
+cache/0/12/0/descent = 0.0
+cache/0/12/0/underline_position = 0.0
+cache/0/12/0/underline_thickness = 0.0
+cache/0/12/0/scale = 1.0
+cache/0/11/0/ascent = 0.0
+cache/0/11/0/descent = 0.0
+cache/0/11/0/underline_position = 0.0
+cache/0/11/0/underline_thickness = 0.0
+cache/0/11/0/scale = 1.0
+cache/0/10/0/ascent = 0.0
+cache/0/10/0/descent = 0.0
+cache/0/10/0/underline_position = 0.0
+cache/0/10/0/underline_thickness = 0.0
+cache/0/10/0/scale = 1.0
+cache/0/9/0/ascent = 0.0
+cache/0/9/0/descent = 0.0
+cache/0/9/0/underline_position = 0.0
+cache/0/9/0/underline_thickness = 0.0
+cache/0/9/0/scale = 1.0
+cache/0/8/0/ascent = 0.0
+cache/0/8/0/descent = 0.0
+cache/0/8/0/underline_position = 0.0
+cache/0/8/0/underline_thickness = 0.0
+cache/0/8/0/scale = 1.0
+cache/0/7/0/ascent = 0.0
+cache/0/7/0/descent = 0.0
+cache/0/7/0/underline_position = 0.0
+cache/0/7/0/underline_thickness = 0.0
+cache/0/7/0/scale = 1.0
+cache/0/6/0/ascent = 0.0
+cache/0/6/0/descent = 0.0
+cache/0/6/0/underline_position = 0.0
+cache/0/6/0/underline_thickness = 0.0
+cache/0/6/0/scale = 1.0
+cache/0/5/0/ascent = 0.0
+cache/0/5/0/descent = 0.0
+cache/0/5/0/underline_position = 0.0
+cache/0/5/0/underline_thickness = 0.0
+cache/0/5/0/scale = 1.0
+cache/0/4/0/ascent = 0.0
+cache/0/4/0/descent = 0.0
+cache/0/4/0/underline_position = 0.0
+cache/0/4/0/underline_thickness = 0.0
+cache/0/4/0/scale = 1.0
+cache/0/17/0/ascent = 0.0
+cache/0/17/0/descent = 0.0
+cache/0/17/0/underline_position = 0.0
+cache/0/17/0/underline_thickness = 0.0
+cache/0/17/0/scale = 1.0
+cache/0/18/0/ascent = 0.0
+cache/0/18/0/descent = 0.0
+cache/0/18/0/underline_position = 0.0
+cache/0/18/0/underline_thickness = 0.0
+cache/0/18/0/scale = 1.0
+cache/0/19/0/ascent = 0.0
+cache/0/19/0/descent = 0.0
+cache/0/19/0/underline_position = 0.0
+cache/0/19/0/underline_thickness = 0.0
+cache/0/19/0/scale = 1.0
+cache/0/20/0/ascent = 0.0
+cache/0/20/0/descent = 0.0
+cache/0/20/0/underline_position = 0.0
+cache/0/20/0/underline_thickness = 0.0
+cache/0/20/0/scale = 1.0
+cache/0/21/0/ascent = 0.0
+cache/0/21/0/descent = 0.0
+cache/0/21/0/underline_position = 0.0
+cache/0/21/0/underline_thickness = 0.0
+cache/0/21/0/scale = 1.0
+cache/0/22/0/ascent = 0.0
+cache/0/22/0/descent = 0.0
+cache/0/22/0/underline_position = 0.0
+cache/0/22/0/underline_thickness = 0.0
+cache/0/22/0/scale = 1.0
+cache/0/23/0/ascent = 0.0
+cache/0/23/0/descent = 0.0
+cache/0/23/0/underline_position = 0.0
+cache/0/23/0/underline_thickness = 0.0
+cache/0/23/0/scale = 1.0
+cache/0/24/0/ascent = 0.0
+cache/0/24/0/descent = 0.0
+cache/0/24/0/underline_position = 0.0
+cache/0/24/0/underline_thickness = 0.0
+cache/0/24/0/scale = 1.0
+cache/0/25/0/ascent = 0.0
+cache/0/25/0/descent = 0.0
+cache/0/25/0/underline_position = 0.0
+cache/0/25/0/underline_thickness = 0.0
+cache/0/25/0/scale = 1.0
+cache/0/60/0/ascent = 0.0
+cache/0/60/0/descent = 0.0
+cache/0/60/0/underline_position = 0.0
+cache/0/60/0/underline_thickness = 0.0
+cache/0/60/0/scale = 1.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2mgoq"]
 texture = ExtResource("2_1q6tm")
@@ -968,14 +1086,25 @@ limit_bottom = 529
 position_smoothing_enabled = true
 
 [node name="Reset" type="Button" parent="Players/Player1/Camera2D"]
-offset_left = 2.6000307
-offset_top = -15.999977
-offset_right = 10.600031
-offset_bottom = -7.999977
-scale = Vector2(0.1956733, 0.26426873)
+offset_left = 2.6000237
+offset_top = -15.399978
+offset_right = 78.60002
+offset_bottom = 15.600022
+scale = Vector2(0.1956733, 0.19226873)
 text = "Reset"
 icon = ExtResource("7_vcilj")
 script = ExtResource("8_bl0du")
+
+[node name="coin" type="Label" parent="Players/Player1/Camera2D"]
+offset_left = 3.2000246
+offset_top = -9.399976
+offset_right = 162.20003
+offset_bottom = 71.60002
+scale = Vector2(0.039999567, 0.03999996)
+theme_override_fonts/font = SubResource("FontFile_i6dbo")
+theme_override_font_sizes/font_size = 60
+text = "Coins:"
+script = ExtResource("8_fhuy1")
 
 [node name="Map" type="Node" parent="."]
 
@@ -1229,26 +1358,28 @@ position = Vector2(-391, -27)
 [node name="saw15" parent="Saw" instance=ExtResource("17_yvrk7")]
 position = Vector2(-447, -19)
 
-[node name="saw" parent="." instance=ExtResource("17_yvrk7")]
+[node name="saw16" parent="Saw" instance=ExtResource("17_yvrk7")]
 position = Vector2(-316, -41)
 
-[node name="saw2" parent="." instance=ExtResource("17_yvrk7")]
+[node name="saw17" parent="Saw" instance=ExtResource("17_yvrk7")]
 position = Vector2(-139, -78)
 
-[node name="saw3" parent="." instance=ExtResource("17_yvrk7")]
+[node name="saw18" parent="Saw" instance=ExtResource("17_yvrk7")]
 position = Vector2(-199, -132)
 
-[node name="saw4" parent="." instance=ExtResource("17_yvrk7")]
+[node name="saw19" parent="Saw" instance=ExtResource("17_yvrk7")]
 position = Vector2(-108, -207)
 
-[node name="saw5" parent="." instance=ExtResource("17_yvrk7")]
+[node name="saw20" parent="Saw" instance=ExtResource("17_yvrk7")]
 position = Vector2(-199, -198)
 
-[node name="saw6" parent="." instance=ExtResource("17_yvrk7")]
+[node name="saw21" parent="Saw" instance=ExtResource("17_yvrk7")]
 position = Vector2(-379, -211)
 
-[node name="saw7" parent="." instance=ExtResource("17_yvrk7")]
+[node name="saw22" parent="Saw" instance=ExtResource("17_yvrk7")]
 position = Vector2(-282, -202)
+
+[node name="gold_coin" type="Node" parent="."]
 
 [connection signal="pressed" from="Players/Player1/Camera2D/Reset" to="Players/Player1/Camera2D/Reset" method="_on_pressed"]
 [connection signal="pressed" from="Players/Player1/Camera2D/Reset" to="Map/Lava_killzone" method="_on_button_pressed"]
