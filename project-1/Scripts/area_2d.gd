@@ -1,6 +1,6 @@
 extends Area2D
-var key = false
+var key1 = 0
 
 func _on_body_entered(body: Node2D) -> void:
-	key = true
+	Key.key1 += 1
 	$AudioStreamPlayer2D.play()
