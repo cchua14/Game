@@ -1,10 +1,11 @@
-[gd_scene load_steps=35 format=4 uid="uid://vojmb8dtmtt8"]
+[gd_scene load_steps=39 format=4 uid="uid://vojmb8dtmtt8"]
 
 [ext_resource type="Texture2D" uid="uid://di6vrudj622po" path="res://Asset/Pixel Adventure 1/Free/Background/Purple.png" id="1_ng0s0"]
 [ext_resource type="Texture2D" uid="uid://b8iax7lrq50p3" path="res://Asset/Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="2_s8nj6"]
 [ext_resource type="PackedScene" uid="uid://bxv830x557hr4" path="res://Scenes/Player1.tscn" id="3_vwg62"]
 [ext_resource type="PackedScene" uid="uid://cewpm1m6sn8r6" path="res://Scenes/player2.tscn" id="4_qf6rc"]
 [ext_resource type="PackedScene" uid="uid://vmriw1nd6ceh" path="res://Scenes/rcok_head.tscn" id="5_vwg62"]
+[ext_resource type="PackedScene" uid="uid://dnx0f876s57pu" path="res://Scenes/level 3 enermy 1.tscn" id="6_qf6rc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g5cw1"]
 texture = ExtResource("1_ng0s0")
@@ -633,6 +634,43 @@ _data = {
 &"new_animation": SubResource("Animation_2awvy")
 }
 
+[sub_resource type="Animation" id="Animation_fxnjf"]
+resource_name = "new_animation"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-988, 178), Vector2(526, 168)]
+}
+
+[sub_resource type="Animation" id="Animation_ki8bc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-988, 178)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nbwsh"]
+_data = {
+&"RESET": SubResource("Animation_ki8bc"),
+&"new_animation": SubResource("Animation_fxnjf")
+}
+
 [node name="Level 3" type="Node2D"]
 position = Vector2(0, -3)
 
@@ -732,3 +770,13 @@ libraries = {
 &"": SubResource("AnimationLibrary_gmj2a")
 }
 autoplay = "RESET"
+
+[node name="Bunny" parent="." instance=ExtResource("6_qf6rc")]
+position = Vector2(-988, 178)
+scale = Vector2(-1.0000048, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Bunny"]
+libraries = {
+&"": SubResource("AnimationLibrary_nbwsh")
+}
+autoplay = "new_animation"
