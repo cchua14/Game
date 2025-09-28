@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://di6vrudj622po" path="res://Asset/Pixel Adventure 1/Free/Background/Purple.png" id="1_ng0s0"]
 [ext_resource type="Texture2D" uid="uid://b8iax7lrq50p3" path="res://Asset/Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="2_s8nj6"]
 [ext_resource type="PackedScene" uid="uid://bxv830x557hr4" path="res://Scenes/Player1.tscn" id="3_vwg62"]
-[ext_resource type="PackedScene" path="res://Scenes/player2.tscn" id="4_qf6rc"]
+[ext_resource type="PackedScene" uid="uid://cewpm1m6sn8r6" path="res://Scenes/player2.tscn" id="4_qf6rc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g5cw1"]
 texture = ExtResource("1_ng0s0")
@@ -343,7 +343,7 @@ position = Vector2(-986, 367)
 scale = Vector2(2.7037816, 3.9865427)
 
 [node name="Camera2D" type="Camera2D" parent="Node/Character 1"]
-zoom = Vector2(3, 3)
+zoom = Vector2(2, 2)
 
 [node name="Player2" parent="Node" instance=ExtResource("4_qf6rc")]
 position = Vector2(-945.00006, 363)
