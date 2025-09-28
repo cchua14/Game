@@ -364,12 +364,14 @@ shape = SubResource("RectangleShape2D_dvont")
 rotation = -0.37991548
 scale = Vector2(0.5855759, 0.5363488)
 sprite_frames = SubResource("SpriteFrames_76t8q")
-frame_progress = 0.1408864
+autoplay = "default"
+frame_progress = 0.40544882
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.4400002, 0.47999945)
 sprite_frames = SubResource("SpriteFrames_ua0gf")
-frame_progress = 0.4501395
+autoplay = "default"
+frame_progress = 0.71470165
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(7.6293945e-06, -1)
