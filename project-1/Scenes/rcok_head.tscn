@@ -1,14 +1,54 @@
-[gd_scene load_steps=3 format=3 uid="uid://vmriw1nd6ceh"]
+[gd_scene load_steps=8 format=3 uid="uid://vmriw1nd6ceh"]
+
+[ext_resource type="Texture2D" uid="uid://cd3a7tve7b2rm" path="res://Asset/Pixel Adventure 1/Free/Traps/Rock Head/Blink (42x42).png" id="1_oyt46"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u4bi0"]
+size = Vector2(154, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mnqjd"]
+atlas = ExtResource("1_oyt46")
+region = Rect2(0, 0, 42, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1vuwh"]
+atlas = ExtResource("1_oyt46")
+region = Rect2(42, 0, 42, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tysrb"]
+atlas = ExtResource("1_oyt46")
+region = Rect2(84, 0, 42, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p5ykx"]
+atlas = ExtResource("1_oyt46")
+region = Rect2(126, 0, 42, 42)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_oyt46"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mnqjd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1vuwh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tysrb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p5ykx")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
 
 [node name="Rcok Head" type="Area2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(28, 26)
+scale = Vector2(0.29795456, -1.8736023)
 shape = SubResource("RectangleShape2D_u4bi0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(28, 26)
 sprite_frames = SubResource("SpriteFrames_oyt46")
-frame_progress = 0.43728834
+animation = &"new_animation"
