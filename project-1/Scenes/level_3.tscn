@@ -803,15 +803,7 @@ tile_set = SubResource("TileSet_5e78q")
 [node name="Node" type="Node" parent="."]
 
 [node name="Character 1" parent="Node" instance=ExtResource("3_vwg62")]
-<<<<<<< HEAD
-<<<<<<< HEAD
 position = Vector2(586, 149)
-=======
-position = Vector2(-874, 345)
->>>>>>> b65bf02a096b8aaa5a5a0ab7f7481b7915d35f4d
-=======
-position = Vector2(-833, -33)
->>>>>>> 37583997fc035b5b02334e5938530156851fac3c
 scale = Vector2(1.6426015, 1.9065404)
 
 [node name="Camera2D" type="Camera2D" parent="Node/Character 1"]
