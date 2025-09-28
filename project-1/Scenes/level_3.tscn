@@ -815,10 +815,10 @@ scale = Vector2(1.6426015, 1.9065404)
 [node name="Camera2D" type="Camera2D" parent="Node/Character 1"]
 position = Vector2(-1.8492618, 3.827575e-06)
 zoom = Vector2(1.5, 1.5)
-limit_left = -1063
-limit_top = -597
-limit_right = 934
-limit_bottom = 467
+limit_left = -1045
+limit_top = -569
+limit_right = 918
+limit_bottom = 444
 
 [node name="Player2" parent="Node" instance=ExtResource("4_qf6rc")]
 position = Vector2(-945.00006, 363)
@@ -1013,6 +1013,7 @@ position = Vector2(-761, 327)
 texture = ExtResource("9_l4wr6")
 
 [node name="Area2D" type="Area2D" parent="."]
+collision_mask = 2
 script = ExtResource("10_jtv8s")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
