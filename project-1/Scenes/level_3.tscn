@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://crijd8u0cllrf" path="res://Scenes/Fire Trap 1.tscn" id="7_53xsp"]
 [ext_resource type="PackedScene" uid="uid://bea4xackkap0a" path="res://Scenes/GHost _2d.tscn" id="8_5e78q"]
 [ext_resource type="Texture2D" uid="uid://cew2rnea08qmq" path="res://Asset/Pixel Adventure 1/Free/Menu/Levels/03.png" id="9_l4wr6"]
-[ext_resource type="Script" uid="uid://c4kdu0br25v2x" path="res://Scenes/end.gd" id="10_jtv8s"]
+[ext_resource type="Script" path="res://Scenes/end.gd" id="10_jtv8s"]
 [ext_resource type="Texture2D" uid="uid://bkcjn7l6ia747" path="res://Asset/door.png" id="11_c81s1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g5cw1"]
@@ -822,7 +822,7 @@ limit_bottom = 467
 
 [node name="Player2" parent="Node" instance=ExtResource("4_qf6rc")]
 position = Vector2(-945.00006, 363)
-scale = Vector2(2.1584394, 2.4985538)
+scale = Vector2(2.1993306, 2.0876842)
 
 [node name="Rcok Head" parent="." instance=ExtResource("5_vwg62")]
 position = Vector2(-757, 200)
