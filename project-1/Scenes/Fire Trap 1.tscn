@@ -1,8 +1,37 @@
-[gd_scene load_steps=3 format=3 uid="uid://crijd8u0cllrf"]
+[gd_scene load_steps=7 format=3 uid="uid://crijd8u0cllrf"]
+
+[ext_resource type="Texture2D" uid="uid://tg0f61bfmn4d" path="res://Asset/Pixel Adventure 1/Free/Traps/Fire/On (16x32).png" id="1_cy2nk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qk8xg"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_rak10"]
+atlas = ExtResource("1_cy2nk")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ndxr"]
+atlas = ExtResource("1_cy2nk")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kqvrk"]
+atlas = ExtResource("1_cy2nk")
+region = Rect2(32, 0, 16, 32)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_cy2nk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rak10")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ndxr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kqvrk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Node2D" type="Node2D"]
 
