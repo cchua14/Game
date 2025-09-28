@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cph40eetrstpy"]
+
+[ext_resource type="Script" uid="uid://c8fwit5vfu75m" path="res://Scripts/clicker/killzone lv5.gd" id="1_pmscg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pahi8"]
+
+[node name="killzone lv5" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("1_pmscg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_pahi8")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
