@@ -1,6 +1,7 @@
-[gd_scene load_steps=16 format=3 uid="uid://dnx0f876s57pu"]
+[gd_scene load_steps=17 format=3 uid="uid://dnx0f876s57pu"]
 
 [ext_resource type="Texture2D" uid="uid://bamefec6ads5i" path="res://Asset/Pixel Adventure 2/Enemies/Bunny/Run (34x44).png" id="1_556mc"]
+[ext_resource type="Script" uid="uid://debxj4f4gy10m" path="res://Asset/Pixel Adventure 2/Enemies/Bunny/level_3_enermy_1.gd" id="1_j278p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s56mb"]
 
@@ -97,6 +98,8 @@ animations = [{
 }]
 
 [node name="Area2D" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_j278p")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_s56mb")
@@ -107,3 +110,5 @@ scale = Vector2(0.9705882, 1)
 sprite_frames = SubResource("SpriteFrames_556mc")
 frame = 9
 frame_progress = 0.26402107
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
