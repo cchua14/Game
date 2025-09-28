@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://vmriw1nd6ceh"]
+[gd_scene load_steps=9 format=3 uid="uid://vmriw1nd6ceh"]
 
+[ext_resource type="Script" uid="uid://c8u6ukmraibdj" path="res://Asset/Pixel Adventure 1/Free/Traps/Rock Head/rcok_head.gd" id="1_mnqjd"]
 [ext_resource type="Texture2D" uid="uid://cd3a7tve7b2rm" path="res://Asset/Pixel Adventure 1/Free/Traps/Rock Head/Blink (42x42).png" id="1_oyt46"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u4bi0"]
@@ -42,6 +43,8 @@ animations = [{
 }]
 
 [node name="Rcok Head" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_mnqjd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(28, 26)
@@ -52,3 +55,6 @@ shape = SubResource("RectangleShape2D_u4bi0")
 position = Vector2(28, 26)
 sprite_frames = SubResource("SpriteFrames_oyt46")
 animation = &"new_animation"
+
+[connection signal="area_shape_entered" from="." to="." method="_on_area_shape_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
