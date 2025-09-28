@@ -15,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://cew2rnea08qmq" path="res://Asset/Pixel Adventure 1/Free/Menu/Levels/03.png" id="9_l4wr6"]
 [ext_resource type="Script" uid="uid://c4kdu0br25v2x" path="res://Scenes/end.gd" id="10_jtv8s"]
 [ext_resource type="Texture2D" uid="uid://bkcjn7l6ia747" path="res://Asset/door.png" id="11_c81s1"]
-[ext_resource type="Script" uid="uid://dqtk1bustxh46" path="res://Scenes/l3kill.gd" id="16_j77fg"]
+[ext_resource type="Script" path="res://Scenes/l3kill.gd" id="16_j77fg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g5cw1"]
 texture = ExtResource("1_ng0s0")
@@ -799,7 +799,7 @@ _data = {
 size = Vector2(95.5, 139)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ki8bc"]
-distance = -494.0
+distance = -495.0
 
 [node name="Level 3" type="Node2D"]
 
@@ -817,7 +817,7 @@ tile_set = SubResource("TileSet_5e78q")
 [node name="Node" type="Node" parent="."]
 
 [node name="Character 1" parent="Node" instance=ExtResource("3_vwg62")]
-position = Vector2(-891, 347)
+position = Vector2(71, 364)
 scale = Vector2(1.6426015, 1.9065404)
 
 [node name="Camera2D" type="Camera2D" parent="Node/Character 1"]
