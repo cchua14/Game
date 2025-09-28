@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=4 uid="uid://vojmb8dtmtt8"]
+[gd_scene load_steps=54 format=4 uid="uid://vojmb8dtmtt8"]
 
 [ext_resource type="Texture2D" uid="uid://di6vrudj622po" path="res://Asset/Pixel Adventure 1/Free/Background/Purple.png" id="1_ng0s0"]
 [ext_resource type="Texture2D" uid="uid://b8iax7lrq50p3" path="res://Asset/Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="2_s8nj6"]
@@ -8,6 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://dnx0f876s57pu" path="res://Scenes/level 3 enermy 1.tscn" id="6_qf6rc"]
 [ext_resource type="PackedScene" uid="uid://crijd8u0cllrf" path="res://Scenes/Fire Trap 1.tscn" id="7_53xsp"]
 [ext_resource type="PackedScene" uid="uid://bea4xackkap0a" path="res://Scenes/GHost _2d.tscn" id="8_5e78q"]
+[ext_resource type="Texture2D" uid="uid://cew2rnea08qmq" path="res://Asset/Pixel Adventure 1/Free/Menu/Levels/03.png" id="9_l4wr6"]
+[ext_resource type="Script" uid="uid://c4kdu0br25v2x" path="res://Scenes/end.gd" id="10_jtv8s"]
+[ext_resource type="Texture2D" uid="uid://bkcjn7l6ia747" path="res://Asset/door.png" id="11_c81s1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g5cw1"]
 texture = ExtResource("1_ng0s0")
@@ -750,6 +753,21 @@ _data = {
 &"new_animation": SubResource("Animation_gmj2a")
 }
 
+[sub_resource type="Animation" id="Animation_rybab"]
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(724, -394), Vector2(-758, -391)]
+}
+
 [sub_resource type="Animation" id="Animation_3oi3s"]
 resource_name = "new_animation"
 loop_mode = 1
@@ -766,26 +784,14 @@ tracks/0/keys = {
 "values": [Vector2(724, -394), Vector2(-826, -393)]
 }
 
-[sub_resource type="Animation" id="Animation_rybab"]
-length = 0.6
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.6),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(724, -394), Vector2(-758, -391)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_g6bfm"]
 _data = {
 &"RESET": SubResource("Animation_rybab"),
 &"new_animation": SubResource("Animation_3oi3s")
 }
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n4vm5"]
+size = Vector2(95.5, 139)
 
 [node name="Level 3" type="Node2D"]
 
@@ -816,7 +822,7 @@ limit_bottom = 467
 
 [node name="Player2" parent="Node" instance=ExtResource("4_qf6rc")]
 position = Vector2(-945.00006, 363)
-scale = Vector2(2.5984395, 3.4185538)
+scale = Vector2(2.1584394, 2.4985538)
 
 [node name="Rcok Head" parent="." instance=ExtResource("5_vwg62")]
 position = Vector2(-757, 200)
@@ -1001,3 +1007,22 @@ libraries = {
 &"": SubResource("AnimationLibrary_g6bfm")
 }
 autoplay = "new_animation"
+
+[node name="03" type="Sprite2D" parent="."]
+position = Vector2(-761, 327)
+texture = ExtResource("9_l4wr6")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("10_jtv8s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(828.25, -442.5)
+shape = SubResource("RectangleShape2D_n4vm5")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+position = Vector2(833, -449.00003)
+scale = Vector2(0.66883117, 0.51086956)
+texture = ExtResource("11_c81s1")
+
+[connection signal="body_entered" from="Area2D" to="Node/Character 1" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

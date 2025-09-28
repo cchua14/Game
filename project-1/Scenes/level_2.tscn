@@ -1,4 +1,4 @@
-[gd_scene load_steps=77 format=4 uid="uid://cvm3728aqjnvb"]
+[gd_scene load_steps=78 format=4 uid="uid://cvm3728aqjnvb"]
 
 [ext_resource type="Script" uid="uid://g6bnw1wlkljl" path="res://Scripts/main2.gd" id="1_hj5x7"]
 [ext_resource type="Texture2D" uid="uid://b8iax7lrq50p3" path="res://Asset/Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="2_1q6tm"]
@@ -30,6 +30,7 @@
 [ext_resource type="PackedScene" uid="uid://bl8ffjwwmia5w" path="res://Scenes/gambler_lv_2.tscn" id="26_d42f2"]
 [ext_resource type="Script" uid="uid://8lyvsbqq8t3i" path="res://Scripts/clicker/area_2d.gd" id="29_kwf64"]
 [ext_resource type="Texture2D" uid="uid://bo6xvvqc4psbk" path="res://Asset/Pixel Adventure 1/Free/Items/Fruits/Apple.png" id="30_5s1wx"]
+[ext_resource type="Texture2D" uid="uid://cew2rnea08qmq" path="res://Asset/Pixel Adventure 1/Free/Menu/Levels/03.png" id="31_5s1wx"]
 
 [sub_resource type="Animation" id="Animation_2mgoq"]
 length = 0.001
@@ -1520,6 +1521,10 @@ position = Vector2(606, 432)
 texture = ExtResource("30_5s1wx")
 region_enabled = true
 region_rect = Rect2(510, 0, 34, 32)
+
+[node name="03" type="Sprite2D" parent="."]
+position = Vector2(-791, -230)
+texture = ExtResource("31_5s1wx")
 
 [connection signal="pressed" from="Players/Player1/Camera2D/Reset" to="Players/Player1/Camera2D/Reset" method="_on_pressed"]
 [connection signal="pressed" from="Players/Player1/Camera2D/Reset" to="Map/Lava_killzone" method="_on_button_pressed"]
