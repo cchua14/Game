@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=4 uid="uid://vojmb8dtmtt8"]
+[gd_scene load_steps=60 format=4 uid="uid://vojmb8dtmtt8"]
 
 [ext_resource type="Texture2D" uid="uid://di6vrudj622po" path="res://Asset/Pixel Adventure 1/Free/Background/Purple.png" id="1_ng0s0"]
 [ext_resource type="Texture2D" uid="uid://b8iax7lrq50p3" path="res://Asset/Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="2_s8nj6"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://cew2rnea08qmq" path="res://Asset/Pixel Adventure 1/Free/Menu/Levels/03.png" id="9_l4wr6"]
 [ext_resource type="Script" uid="uid://c4kdu0br25v2x" path="res://Scenes/end.gd" id="10_jtv8s"]
 [ext_resource type="Texture2D" uid="uid://bkcjn7l6ia747" path="res://Asset/door.png" id="11_c81s1"]
+[ext_resource type="Script" uid="uid://dqtk1bustxh46" path="res://Scenes/l3kill.gd" id="16_j77fg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g5cw1"]
 texture = ExtResource("1_ng0s0")
@@ -797,6 +798,9 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n4vm5"]
 size = Vector2(95.5, 139)
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ki8bc"]
+distance = -494.0
+
 [node name="Level 3" type="Node2D"]
 
 [node name="Background" type="TileMapLayer" parent="."]
@@ -1049,7 +1053,14 @@ position = Vector2(833, -449.00003)
 scale = Vector2(0.66883117, 0.51086956)
 texture = ExtResource("11_c81s1")
 
+[node name="killzone" type="Area2D" parent="."]
+script = ExtResource("16_j77fg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
+shape = SubResource("WorldBoundaryShape2D_ki8bc")
+
 [connection signal="pressed" from="Node/Character 1/Camera2D/Reset" to="Node/Character 1/Camera2D/Reset" method="_on_pressed"]
 [connection signal="pressed" from="Node/Character 1/Camera2D/menu" to="Node/Character 1/Camera2D/menu" method="_on_pressed"]
 [connection signal="body_entered" from="Area2D" to="Node/Character 1" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="killzone" to="killzone" method="_on_body_entered"]
