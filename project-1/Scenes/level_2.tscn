@@ -1088,7 +1088,7 @@ autoplay = "Move up"
 position = Vector2(-748, 431)
 
 [node name="Player1" parent="Players" instance=ExtResource("3_v36qu")]
-position = Vector2(-725, 433)
+position = Vector2(-724, 433)
 
 [node name="Camera2D" type="Camera2D" parent="Players/Player1"]
 position = Vector2(1.666626, 6.666626)
