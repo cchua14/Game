@@ -1,0 +1,94 @@
+[gd_scene load_steps=12 format=3 uid="uid://odnpbonf6vf0"]
+
+[ext_resource type="Script" uid="uid://bpl7e72j5430r" path="res://Scripts/clicker/character_body_2d.gd" id="1_r0nvb"]
+[ext_resource type="Script" uid="uid://ox6l4x2hy2cd" path="res://Scripts/clicker/level_4.gd" id="1_v8wvo"]
+[ext_resource type="Script" uid="uid://tqafxi4plmqn" path="res://Scripts/clicker/click+1.gd" id="2_2o631"]
+[ext_resource type="Texture2D" uid="uid://bihmdc1cmute5" path="res://Asset/Pixel Adventure 1/Free/Main Characters/Ninja Frog/Jump (32x32).png" id="2_echo7"]
+[ext_resource type="Script" uid="uid://b84map6hlkt8n" path="res://Scripts/clicker/score_display.gd" id="3_lfgyv"]
+[ext_resource type="Script" uid="uid://87aia1i4mico" path="res://Scripts/clicker/frog.gd" id="3_p7cl3"]
+[ext_resource type="Texture2D" uid="uid://yprrg333gj2h" path="res://Asset/Pixel Adventure 1/Free/Main Characters/Pink Man/Jump (32x32).png" id="7_p7cl3"]
+[ext_resource type="Script" uid="uid://eyqce87vvk4t" path="res://Scripts/clicker/button_3.gd" id="8_erpp8"]
+[ext_resource type="Texture2D" uid="uid://bbbm604sx85b8" path="res://Asset/Pixel Adventure 1/Free/Main Characters/Virtual Guy/Jump (32x32).png" id="9_8ndbb"]
+[ext_resource type="Script" uid="uid://ci8auh4jdgdos" path="res://Scripts/clicker/button_4.gd" id="10_cahgn"]
+[ext_resource type="Script" uid="uid://v04d8humq77s" path="res://Scripts/clicker/button_5.gd" id="11_cahgn"]
+
+[node name="level_4" type="Node2D"]
+script = ExtResource("1_v8wvo")
+
+[node name="Button" type="Button" parent="."]
+offset_left = -85.0
+offset_top = -7.0
+offset_right = 122.0
+offset_bottom = 47.0
+text = "Cost 5 score
+Generate 2 score/???sec"
+icon = ExtResource("2_echo7")
+script = ExtResource("3_p7cl3")
+
+[node name="Button2" type="Button" parent="."]
+offset_left = -47.0
+offset_top = -48.0
+offset_right = 79.0
+offset_bottom = -17.0
+text = "Click +1 score"
+script = ExtResource("2_2o631")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_r0nvb")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+zoom = Vector2(3, 3)
+
+[node name="Label" type="Label" parent="."]
+offset_left = -105.0
+offset_top = -102.0
+offset_right = 19.0
+offset_bottom = -79.0
+text = "Current score:"
+script = ExtResource("3_lfgyv")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = -123.0
+offset_top = -79.0
+offset_right = 125.0
+offset_bottom = -56.0
+text = "Use arrow keys to move camera"
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Button3" type="Button" parent="."]
+offset_left = -86.0
+offset_top = 57.0
+offset_right = 152.0
+offset_bottom = 111.0
+text = "Cost 100000 score
+Generate 150 score/???sec"
+icon = ExtResource("7_p7cl3")
+script = ExtResource("8_erpp8")
+
+[node name="Button4" type="Button" parent="."]
+offset_left = -90.0
+offset_top = 119.0
+offset_right = 166.0
+offset_bottom = 173.0
+text = "Cost 100000000 score
+Generate 1000 score/???sec"
+icon = ExtResource("9_8ndbb")
+script = ExtResource("10_cahgn")
+
+[node name="Button5" type="Button" parent="."]
+offset_left = -42.0
+offset_top = 181.0
+offset_right = 86.0
+offset_bottom = 235.0
+text = "End the game
+Cost 10^100000
+"
+script = ExtResource("11_cahgn")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
+[connection signal="timeout" from="Timer" to="Button" method="_on_timer_timeout"]
+[connection signal="pressed" from="Button3" to="Button3" method="_on_pressed"]
+[connection signal="pressed" from="Button4" to="Button4" method="_on_pressed"]
+[connection signal="pressed" from="Button5" to="Button5" method="_on_pressed"]
