@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 Main2="*res://Scripts/main2.gd"
 MainMenu="*res://Scripts/main_menu.gd"
 Lv1Main="*res://Scripts/lv1main.gd"
+L3="*res://Scripts/level_3.gd"
 
 [filesystem]
 

@@ -10,5 +10,5 @@ func _on_body_entered(body: Node2D) -> void:
 
 
 func _on_timer_timeout() -> void:
-	Main2.level2_coin += 1
+	L3.coin_l3 += 1
 	queue_free()
