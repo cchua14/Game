@@ -1086,11 +1086,11 @@ icon = ExtResource("14_yr1f0")
 script = ExtResource("15_gwa31")
 
 [node name="coin" type="Label" parent="Player/Character 1/Camera2D2"]
-offset_left = 7.0
+offset_left = 9.0
 offset_top = -8.0
-offset_right = 166.0
+offset_right = 168.0
 offset_bottom = 73.0
-scale = Vector2(0.039999567, 0.03999996)
+scale = Vector2(0.11141998, 0.07531022)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = SubResource("FontFile_r83rk")
@@ -1099,11 +1099,11 @@ text = "Coins:"
 script = ExtResource("13_ocohq")
 
 [node name="Death" type="Label" parent="Player/Character 1/Camera2D2"]
-offset_left = 7.0
-offset_top = -5.0
-offset_right = 483.0
-offset_bottom = 76.0
-scale = Vector2(0.039999567, 0.03999996)
+offset_left = 9.000001
+offset_top = -4.0
+offset_right = 485.0
+offset_bottom = 77.0
+scale = Vector2(0.07345182, 0.07288642)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = SubResource("FontFile_r83rk")
@@ -1194,6 +1194,7 @@ position = Vector2(601, -310)
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(-914, -126)
+collision_mask = 2
 script = ExtResource("26_s0j1j")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D"]
