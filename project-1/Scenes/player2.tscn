@@ -445,13 +445,15 @@ script = ExtResource("1_6mtmu")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.36, 0.4399997)
 sprite_frames = SubResource("SpriteFrames_sqjnx")
-frame_progress = 0.17954732
+autoplay = "default"
+frame_progress = 0.4342541
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
 rotation = -0.7154102
 scale = Vector2(0.3810447, 0.39999938)
 sprite_frames = SubResource("SpriteFrames_1tm64")
-frame_progress = 0.42699203
+autoplay = "default"
+frame_progress = 0.68169874
 
 [node name="Animated_Sprite_2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
