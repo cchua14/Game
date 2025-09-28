@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://dvp0hyp03pdb6"]
+[gd_scene load_steps=9 format=3 uid="uid://dvp0hyp03pdb6"]
 
 [ext_resource type="Texture2D" uid="uid://cqbphtgm3d2ri" path="res://Asset/brackeys_platformer_assets/sprites/knight.png" id="1_0svme"]
+[ext_resource type="Script" uid="uid://baxpu3a0ktgos" path="res://Scripts/lv3scammer.gd" id="1_cq1sw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cq1sw"]
 atlas = ExtResource("1_0svme")
@@ -38,12 +39,19 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_0svme"]
+
+[node name="scammer" type="Node2D"]
 
 [node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("1_cq1sw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
 sprite_frames = SubResource("SpriteFrames_h57hq")
-frame_progress = 0.40203163
+frame_progress = 0.07385607
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-2, 3)
+shape = SubResource("CircleShape2D_0svme")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
