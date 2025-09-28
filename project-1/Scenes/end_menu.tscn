@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://bgrw414pqu3tf"]
+[gd_scene load_steps=20 format=3 uid="uid://bgrw414pqu3tf"]
 
 [ext_resource type="Texture2D" uid="uid://cv5ykqfoh78u" path="res://Asset/Pixel Adventure 1/Free/Background/Brown.png" id="1_rrpri"]
 [ext_resource type="Texture2D" uid="uid://dg5a4l2qmgrj2" path="res://Asset/Pixel Adventure 1/Free/Main Characters/Virtual Guy/Hit (32x32).png" id="2_tx7ng"]
@@ -6,6 +6,7 @@
 [ext_resource type="FontFile" uid="uid://cau82t1dyajnn" path="res://Asset/brackeys_platformer_assets/fonts/PixelOperator8.ttf" id="3_e214x"]
 [ext_resource type="Script" uid="uid://ba1upcb2xyet1" path="res://Scripts/death count end menu only.gd" id="4_77tpm"]
 [ext_resource type="Script" uid="uid://b4b7l01bnwemh" path="res://Scripts/return to menu.gd" id="5_tx7ng"]
+[ext_resource type="AudioStream" uid="uid://bacwj4yjcbrv7" path="res://Asset/field_theme_1.wav" id="7_fjfhw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vp12d"]
 atlas = ExtResource("2_tx7ng")
@@ -150,5 +151,9 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_tx7ng")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_e214x")
 text = "Return to Main Menu"
 script = ExtResource("5_tx7ng")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_fjfhw")
+autoplay = true
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

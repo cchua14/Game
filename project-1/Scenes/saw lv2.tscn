@@ -70,7 +70,7 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_eb2si"]
 radius = 17.029387
 
-[node name="saw" type="StaticBody2D"]
+[node name="sawlv2" type="StaticBody2D"]
 z_index = 2
 
 [node name="Area2D" type="Area2D" parent="."]

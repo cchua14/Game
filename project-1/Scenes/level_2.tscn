@@ -1,4 +1,4 @@
-[gd_scene load_steps=70 format=4 uid="uid://cvm3728aqjnvb"]
+[gd_scene load_steps=71 format=4 uid="uid://cvm3728aqjnvb"]
 
 [ext_resource type="Script" uid="uid://g6bnw1wlkljl" path="res://Scripts/main2.gd" id="1_hj5x7"]
 [ext_resource type="Texture2D" uid="uid://b8iax7lrq50p3" path="res://Asset/Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="2_1q6tm"]
@@ -13,6 +13,7 @@
 [ext_resource type="Script" uid="uid://cvkntcplx0usl" path="res://Scripts/level2_coin_display.gd" id="8_fhuy1"]
 [ext_resource type="Script" uid="uid://bk53pngghrpxa" path="res://Scripts/death_count.gd" id="9_ijtdf"]
 [ext_resource type="PackedScene" uid="uid://bapbwpb67363v" path="res://Scenes/Fire_trap_CC.tscn" id="9_uhnj4"]
+[ext_resource type="Texture2D" uid="uid://c55jhvlasjxqb" path="res://Asset/Pixel Adventure 1/Free/Menu/Levels/02.png" id="10_5jii6"]
 [ext_resource type="Texture2D" uid="uid://bkcjn7l6ia747" path="res://Asset/door.png" id="10_42uki"]
 [ext_resource type="Texture2D" uid="uid://cmbhyv3jt5b0w" path="res://Asset/Pixel Adventure 1/Free/Traps/Spikes/Idle.png" id="10_bl0du"]
 [ext_resource type="Texture2D" uid="uid://cv5ykqfoh78u" path="res://Asset/Pixel Adventure 1/Free/Background/Brown.png" id="11_i6dbo"]
@@ -1073,10 +1074,10 @@ autoplay = "Move up"
 [node name="Players" type="Node" parent="."]
 
 [node name="Player2" parent="Players" instance=ExtResource("8_2mgoq")]
-position = Vector2(-745, 424)
+position = Vector2(-748, 431)
 
 [node name="Player1" parent="Players" instance=ExtResource("3_v36qu")]
-position = Vector2(-684, -147)
+position = Vector2(-725, 433)
 
 [node name="Camera2D" type="Camera2D" parent="Players/Player1"]
 position = Vector2(1.666626, 6.666626)
@@ -1124,9 +1125,9 @@ theme_override_font_sizes/font_size = 60
 text = "Number of Death:"
 script = ExtResource("9_ijtdf")
 
-[node name="coin" parent="Players" instance=ExtResource("19_e2piv")]
-position = Vector2(865.00006, 301)
-scale = Vector2(15.560283, 15.462403)
+[node name="02" type="Sprite2D" parent="Players"]
+position = Vector2(-778, 425)
+texture = ExtResource("10_5jii6")
 
 [node name="Map" type="Node" parent="."]
 
@@ -1391,6 +1392,10 @@ position = Vector2(-3, -133)
 
 [node name="coin10" parent="gold_coin" instance=ExtResource("19_e2piv")]
 position = Vector2(951, -128)
+
+[node name="coin11" parent="gold_coin" instance=ExtResource("19_e2piv")]
+position = Vector2(865.00006, 301)
+scale = Vector2(15.560283, 15.462403)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("20_e2piv")
