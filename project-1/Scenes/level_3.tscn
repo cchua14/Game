@@ -1,14 +1,13 @@
-[gd_scene load_steps=52 format=4 uid="uid://vojmb8dtmtt8"]
+[gd_scene load_steps=50 format=4 uid="uid://vojmb8dtmtt8"]
 
 [ext_resource type="Texture2D" uid="uid://di6vrudj622po" path="res://Asset/Pixel Adventure 1/Free/Background/Purple.png" id="1_ng0s0"]
 [ext_resource type="Texture2D" uid="uid://b8iax7lrq50p3" path="res://Asset/Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="2_s8nj6"]
 [ext_resource type="PackedScene" uid="uid://bxv830x557hr4" path="res://Scenes/Player1.tscn" id="3_vwg62"]
 [ext_resource type="PackedScene" uid="uid://cewpm1m6sn8r6" path="res://Scenes/player2.tscn" id="4_qf6rc"]
-[ext_resource type="PackedScene" path="res://Scenes/rcok_head.tscn" id="5_vwg62"]
-[ext_resource type="PackedScene" path="res://Scenes/level 3 enermy 1.tscn" id="6_qf6rc"]
+[ext_resource type="PackedScene" uid="uid://vmriw1nd6ceh" path="res://Scenes/rcok_head.tscn" id="5_vwg62"]
+[ext_resource type="PackedScene" uid="uid://dnx0f876s57pu" path="res://Scenes/level 3 enermy 1.tscn" id="6_qf6rc"]
 [ext_resource type="PackedScene" uid="uid://crijd8u0cllrf" path="res://Scenes/Fire Trap 1.tscn" id="7_53xsp"]
 [ext_resource type="PackedScene" uid="uid://bea4xackkap0a" path="res://Scenes/GHost _2d.tscn" id="8_5e78q"]
-[ext_resource type="Script" uid="uid://t0xc86314wwx" path="res://Scripts/floor_kill.gd" id="9_l4wr6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g5cw1"]
 texture = ExtResource("1_ng0s0")
@@ -751,21 +750,6 @@ _data = {
 &"new_animation": SubResource("Animation_gmj2a")
 }
 
-[sub_resource type="Animation" id="Animation_rybab"]
-length = 0.6
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.6),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(724, -394), Vector2(-758, -391)]
-}
-
 [sub_resource type="Animation" id="Animation_3oi3s"]
 resource_name = "new_animation"
 loop_mode = 1
@@ -782,13 +766,26 @@ tracks/0/keys = {
 "values": [Vector2(724, -394), Vector2(-826, -393)]
 }
 
+[sub_resource type="Animation" id="Animation_rybab"]
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(724, -394), Vector2(-758, -391)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_g6bfm"]
 _data = {
 &"RESET": SubResource("Animation_rybab"),
 &"new_animation": SubResource("Animation_3oi3s")
 }
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_5e78q"]
 
 [node name="Level 3" type="Node2D"]
 
@@ -807,10 +804,14 @@ tile_set = SubResource("TileSet_5e78q")
 
 [node name="Character 1" parent="Node" instance=ExtResource("3_vwg62")]
 <<<<<<< HEAD
+<<<<<<< HEAD
 position = Vector2(586, 149)
 =======
 position = Vector2(-874, 345)
 >>>>>>> b65bf02a096b8aaa5a5a0ab7f7481b7915d35f4d
+=======
+position = Vector2(-833, -33)
+>>>>>>> 37583997fc035b5b02334e5938530156851fac3c
 scale = Vector2(1.6426015, 1.9065404)
 
 [node name="Camera2D" type="Camera2D" parent="Node/Character 1"]
@@ -1008,24 +1009,3 @@ libraries = {
 &"": SubResource("AnimationLibrary_g6bfm")
 }
 autoplay = "new_animation"
-
-[node name="floor kill" type="Area2D" parent="."]
-position = Vector2(-18, -45)
-collision_mask = 2
-script = ExtResource("9_l4wr6")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor kill"]
-position = Vector2(-38, 496)
-shape = SubResource("WorldBoundaryShape2D_5e78q")
-
-[node name="floor kill2" type="Area2D" parent="."]
-position = Vector2(-18, -45)
-collision_mask = 2
-script = ExtResource("9_l4wr6")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor kill2"]
-position = Vector2(-38, 496)
-shape = SubResource("WorldBoundaryShape2D_5e78q")
-
-[connection signal="body_entered" from="floor kill" to="floor kill" method="_on_body_entered"]
-[connection signal="body_entered" from="floor kill2" to="floor kill2" method="_on_body_entered"]
