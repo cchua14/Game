@@ -773,7 +773,7 @@ autoplay = "RESET"
 
 [node name="Bunny" parent="." instance=ExtResource("6_qf6rc")]
 position = Vector2(-988, 178)
-scale = Vector2(-1.0000048, 1)
+scale = Vector2(-0.52000475, 0.47999877)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Bunny"]
 libraries = {
