@@ -1,12 +1,16 @@
-[gd_scene load_steps=54 format=4 uid="uid://vojmb8dtmtt8"]
+[gd_scene load_steps=58 format=4 uid="uid://vojmb8dtmtt8"]
 
 [ext_resource type="Texture2D" uid="uid://di6vrudj622po" path="res://Asset/Pixel Adventure 1/Free/Background/Purple.png" id="1_ng0s0"]
 [ext_resource type="Texture2D" uid="uid://b8iax7lrq50p3" path="res://Asset/Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="2_s8nj6"]
 [ext_resource type="PackedScene" uid="uid://bxv830x557hr4" path="res://Scenes/Player1.tscn" id="3_vwg62"]
 [ext_resource type="PackedScene" uid="uid://cewpm1m6sn8r6" path="res://Scenes/player2.tscn" id="4_qf6rc"]
+[ext_resource type="Texture2D" uid="uid://bewg0c5xoa7t5" path="res://Asset/Pixel Adventure 1/Free/Menu/Buttons/Restart.png" id="4_xjeco"]
+[ext_resource type="Script" uid="uid://ds11exybir13q" path="res://Scripts/button_restart.gd" id="5_j77fg"]
 [ext_resource type="PackedScene" uid="uid://vmriw1nd6ceh" path="res://Scenes/rcok_head.tscn" id="5_vwg62"]
+[ext_resource type="Texture2D" uid="uid://d1d8n0mng8uok" path="res://Asset/Pixel Adventure 1/Free/Menu/Buttons/Back.png" id="6_ki8bc"]
 [ext_resource type="PackedScene" uid="uid://dnx0f876s57pu" path="res://Scenes/level 3 enermy 1.tscn" id="6_qf6rc"]
 [ext_resource type="PackedScene" uid="uid://crijd8u0cllrf" path="res://Scenes/Fire Trap 1.tscn" id="7_53xsp"]
+[ext_resource type="Script" uid="uid://bq735spr5clfx" path="res://Scripts/menulv2.gd" id="7_nbwsh"]
 [ext_resource type="PackedScene" uid="uid://bea4xackkap0a" path="res://Scenes/GHost _2d.tscn" id="8_5e78q"]
 [ext_resource type="Texture2D" uid="uid://cew2rnea08qmq" path="res://Asset/Pixel Adventure 1/Free/Menu/Levels/03.png" id="9_l4wr6"]
 [ext_resource type="Script" uid="uid://c4kdu0br25v2x" path="res://Scenes/end.gd" id="10_jtv8s"]
@@ -820,6 +824,26 @@ limit_top = -569
 limit_right = 918
 limit_bottom = 444
 
+[node name="Reset" type="Button" parent="Node/Character 1/Camera2D"]
+offset_left = 2.6000237
+offset_top = -15.399978
+offset_right = 78.60002
+offset_bottom = 15.600022
+scale = Vector2(0.1956733, 0.19226873)
+text = "Reset"
+icon = ExtResource("4_xjeco")
+script = ExtResource("5_j77fg")
+
+[node name="menu" type="Button" parent="Node/Character 1/Camera2D"]
+offset_left = 3.2000237
+offset_top = -20.799976
+offset_right = 79.20003
+offset_bottom = 10.200024
+scale = Vector2(0.1956733, 0.19226873)
+text = "Menu"
+icon = ExtResource("6_ki8bc")
+script = ExtResource("7_nbwsh")
+
 [node name="Player2" parent="Node" instance=ExtResource("4_qf6rc")]
 position = Vector2(-945.00006, 363)
 scale = Vector2(2.1993306, 2.0876842)
@@ -1025,5 +1049,7 @@ position = Vector2(833, -449.00003)
 scale = Vector2(0.66883117, 0.51086956)
 texture = ExtResource("11_c81s1")
 
+[connection signal="pressed" from="Node/Character 1/Camera2D/Reset" to="Node/Character 1/Camera2D/Reset" method="_on_pressed"]
+[connection signal="pressed" from="Node/Character 1/Camera2D/menu" to="Node/Character 1/Camera2D/menu" method="_on_pressed"]
 [connection signal="body_entered" from="Area2D" to="Node/Character 1" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
