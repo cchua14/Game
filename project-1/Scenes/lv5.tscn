@@ -15,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://cvbx8hvaac8kq" path="res://Asset/2D Pixel Dungeon Asset Pack/items and trap_animation/mini_chest/mini_chest_2.png" id="13_rcind"]
 [ext_resource type="Texture2D" uid="uid://ce2wqr0erxgbw" path="res://Asset/2D Pixel Dungeon Asset Pack/items and trap_animation/mini_chest/mini_chest_3.png" id="14_6lh1j"]
 [ext_resource type="Texture2D" uid="uid://brwttwbsixj2h" path="res://Asset/2D Pixel Dungeon Asset Pack/items and trap_animation/mini_chest/mini_chest_4.png" id="15_q4ehi"]
-[ext_resource type="Script" uid="uid://qpfl0ksxtb5v" path="res://Scenes/area_2d.gd" id="16_1n3rr"]
+[ext_resource type="Script" uid="uid://qpfl0ksxtb5v" path="res://Scripts/area_2d.gd" id="16_1n3rr"]
 [ext_resource type="Texture2D" uid="uid://b8sduumkqa2t" path="res://Asset/2D Pixel Dungeon Asset Pack/items and trap_animation/flag/flag_1.png" id="16_eb2s6"]
 [ext_resource type="Texture2D" uid="uid://dks21v0t6j5fs" path="res://Asset/2D Pixel Dungeon Asset Pack/items and trap_animation/flag/flag_2.png" id="17_diqpl"]
 [ext_resource type="Texture2D" uid="uid://cv1x43226ulgu" path="res://Asset/2D Pixel Dungeon Asset Pack/items and trap_animation/flag/flag_3.png" id="18_rr1k1"]
@@ -469,7 +469,7 @@ texture = ExtResource("1_vqri7")
 31:12/0 = 0
 0:13/0 = 0
 1:13/0 = 0
-1:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, 8, 8, 8, -3.956892, -4.6763268, 8, 8, 8, -8, -8, -8, -8, 8, -8, -8, -8, -8, -8, 8)
 2:13/0 = 0
 2:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:13/0 = 0
@@ -615,9 +615,9 @@ texture = ExtResource("1_vqri7")
 2:16/0 = 0
 3:16/0 = 0
 4:16/0 = 0
-4:16/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, 8, 8, 8, 8, -8, 8, 8, 8, -8, -8, -8, -8, 8, -8, -8, -8, -8, -8, 8)
+4:16/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, 8, 8, 8, -1.7985859, 8, 8, 8, 8, -8, 0.17985916, -8, -8, -8, -8, -8, -8, -8, -8, 8)
 5:16/0 = 0
-5:16/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, 8, 8, 8, 8, -8, 8, 8, 8, -8, -8, -8, -8, 8, -8, -8, -8, -8, -8, 8)
+5:16/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, 8, 8, 8, -1.7985859, 8, 8, 8, 8, -8, 0.17985916, -8, -8, -8, -8, -8, -8, -8, -8, 8)
 6:16/0 = 0
 7:16/0 = 0
 8:16/0 = 0
@@ -651,9 +651,9 @@ texture = ExtResource("1_vqri7")
 2:17/0 = 0
 3:17/0 = 0
 4:17/0 = 0
-4:17/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, 8, 8, 8, 8, -8, 8, 8, 8, -8, -8, -8, -8, 8, -8, -8, -8, -8, -8, 8)
+4:17/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, 8, 8, 8, -1.7985859, 8, 8, 8, 8, -8, 0.17985916, -8, -8, -8, -8, -8, -8, -8, -8, 8)
 5:17/0 = 0
-5:17/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, 8, 8, 8, 8, -8, 8, 8, 8, -8, -8, -8, -8, 8, -8, -8, -8, -8, -8, 8)
+5:17/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, 8, 8, 8, -1.7985859, 8, 8, 8, 8, -8, 0.17985916, -8, -8, -8, -8, -8, -8, -8, -8, 8)
 6:17/0 = 0
 7:17/0 = 0
 8:17/0 = 0
@@ -1307,7 +1307,7 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_0xwdx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j2ipb"]
-size = Vector2(30, 32)
+size = Vector2(22.5, 35)
 
 [node name="Node2D" type="Node2D"]
 
@@ -1442,14 +1442,15 @@ position = Vector2(-660, -497)
 position = Vector2(-657, -582)
 
 [node name="Label" type="Label" parent="."]
-offset_left = -163.0
-offset_top = -164.0
-offset_right = 111.0
-offset_bottom = -39.0
+offset_left = -112.000015
+offset_top = -110.0
+offset_right = 161.99998
+offset_bottom = 15.0
 scale = Vector2(0.84000003, 0.88)
 text = "1 player
 Find the key and leave through the 
-correct ladder"
+correct ladder
+Arrow keys to move"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-662, -498)
@@ -1479,14 +1480,14 @@ shape = SubResource("CircleShape2D_0xwdx")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Area2D"]
 stream = ExtResource("21_j2ipb")
 
-[node name="Area2D2" type="Area2D" parent="."]
+[node name="teleporter" type="Area2D" parent="."]
 collision_mask = 2
+input_pickable = false
 script = ExtResource("21_0c8ei")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
-position = Vector2(-48, -1105)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="teleporter"]
+position = Vector2(-46.25, -1103.5)
 shape = SubResource("RectangleShape2D_j2ipb")
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
-[connection signal="body_entered" from="Area2D2" to="CharacterBody2D" method="_on_area_2d_2_body_entered"]
-[connection signal="body_entered" from="Area2D2" to="Area2D2" method="_on_body_entered"]
+[connection signal="body_entered" from="teleporter" to="teleporter" method="_on_body_entered"]
