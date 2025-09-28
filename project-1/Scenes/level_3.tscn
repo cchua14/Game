@@ -816,7 +816,7 @@ limit_bottom = 467
 
 [node name="Player2" parent="Node" instance=ExtResource("4_qf6rc")]
 position = Vector2(-945.00006, 363)
-scale = Vector2(2.5984395, 3.4185538)
+scale = Vector2(1.9930785, 1.897628)
 
 [node name="Rcok Head" parent="." instance=ExtResource("5_vwg62")]
 position = Vector2(-757, 200)
