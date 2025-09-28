@@ -1063,7 +1063,7 @@ zoom = Vector2(5, 5)
 limit_left = -814
 limit_top = -693
 limit_right = 1139
-limit_bottom = 560
+limit_bottom = 548
 
 [node name="Reset" type="Button" parent="Player/Character 1/Camera2D2"]
 offset_left = 7.0
@@ -1193,6 +1193,7 @@ position = Vector2(-560, -300)
 position = Vector2(601, -310)
 
 [node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-914, -126)
 script = ExtResource("26_s0j1j")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D"]

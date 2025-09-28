@@ -154,6 +154,7 @@ scale = Vector2(-0.96778554, 1)
 position = Vector2(0, 1)
 scale = Vector2(0.8210996, 0.7221082)
 sprite_frames = SubResource("SpriteFrames_4qm04")
+autoplay = "default"
 frame_progress = 0.998835
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
