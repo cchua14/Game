@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnx0f876s57pu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s56mb"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_556mc"]
+
+[node name="Area2D" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_s56mb")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_556mc")
