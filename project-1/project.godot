@@ -22,6 +22,7 @@ MainMenu="*res://Scripts/main_menu.gd"
 Lv1Main="*res://Scripts/lv1main.gd"
 L3="*res://Scripts/level_3.gd"
 Level4="*res://Scripts/clicker/level_4.gd"
+key="*res://Scripts/clicker/area_2d.gd"
 
 [filesystem]
 

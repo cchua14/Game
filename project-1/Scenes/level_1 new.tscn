@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=4 uid="uid://bqpx0mdyabnv3"]
+[gd_scene load_steps=40 format=4 uid="uid://bqpx0mdyabnv3"]
 
 [ext_resource type="Script" uid="uid://yq3d678ger3j" path="res://Scripts/lv1main.gd" id="1_nl2tp"]
 [ext_resource type="Texture2D" uid="uid://behopkfrtc4u6" path="res://Asset/Pixel Adventure 1/Free/Background/Blue.png" id="1_s5dbj"]
@@ -25,6 +25,8 @@
 [ext_resource type="Texture2D" uid="uid://shndqdt17e6n" path="res://Asset/Pixel Adventure 1/Free/Menu/Levels/01.png" id="20_4x4fw"]
 [ext_resource type="AudioStream" uid="uid://bacwj4yjcbrv7" path="res://Asset/field_theme_1.wav" id="22_3pw0l"]
 [ext_resource type="PackedScene" uid="uid://c20nrdnuqqkyf" path="res://Scenes/gambler_lv_1.tscn" id="23_xt6do"]
+[ext_resource type="Script" uid="uid://bxavhguxxnfqh" path="res://Scenes/clicker/teleport to lv5.gd" id="26_s0j1j"]
+[ext_resource type="Texture2D" uid="uid://ln62kgydbg40" path="res://Asset/Pixel Adventure 1/Free/Items/Fruits/Melon.png" id="27_ffyy7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6444e"]
 texture = ExtResource("1_s5dbj")
@@ -510,6 +512,8 @@ cache/0/60/0/scale = 1.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yn0g2"]
 size = Vector2(65.5, 76)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yob4j"]
 
 [node name="level 1" type="Node2D"]
 script = ExtResource("1_nl2tp")
@@ -1184,7 +1188,21 @@ position = Vector2(-560, -300)
 [node name="Gambler lv 6" parent="." instance=ExtResource("23_xt6do")]
 position = Vector2(601, -310)
 
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("26_s0j1j")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+position = Vector2(977, 510)
+texture = ExtResource("27_ffyy7")
+region_enabled = true
+region_rect = Rect2(512, 0, 32, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(978, 509)
+shape = SubResource("CircleShape2D_yob4j")
+
 [connection signal="body_entered" from="Map/killzone" to="Map/killzone" method="_on_body_entered"]
 [connection signal="pressed" from="Player/Character 1/Camera2D2/Reset" to="Player/Character 1/Camera2D2/Reset" method="_on_pressed"]
 [connection signal="pressed" from="Player/Character 1/Camera2D2/Reset2" to="Player/Character 1/Camera2D2/Reset2" method="_on_pressed"]
 [connection signal="body_entered" from="lv 2 teleporter" to="lv 2 teleporter" method="_on_body_entered"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
