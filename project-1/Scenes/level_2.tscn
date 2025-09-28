@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=4 uid="uid://cvm3728aqjnvb"]
+[gd_scene load_steps=74 format=4 uid="uid://cvm3728aqjnvb"]
 
 [ext_resource type="Script" uid="uid://g6bnw1wlkljl" path="res://Scripts/main2.gd" id="1_hj5x7"]
 [ext_resource type="Texture2D" uid="uid://b8iax7lrq50p3" path="res://Asset/Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="2_1q6tm"]
@@ -11,7 +11,9 @@
 [ext_resource type="PackedScene" uid="uid://cewpm1m6sn8r6" path="res://Scenes/player2.tscn" id="8_2mgoq"]
 [ext_resource type="Script" uid="uid://ds11exybir13q" path="res://Scripts/button_restart.gd" id="8_bl0du"]
 [ext_resource type="Script" uid="uid://cvkntcplx0usl" path="res://Scripts/level2_coin_display.gd" id="8_fhuy1"]
+[ext_resource type="Texture2D" uid="uid://d1d8n0mng8uok" path="res://Asset/Pixel Adventure 1/Free/Menu/Buttons/Back.png" id="8_kjoi8"]
 [ext_resource type="Script" uid="uid://bk53pngghrpxa" path="res://Scripts/death_count.gd" id="9_ijtdf"]
+[ext_resource type="Script" uid="uid://bq735spr5clfx" path="res://Scripts/menulv2.gd" id="9_nuasi"]
 [ext_resource type="PackedScene" uid="uid://bapbwpb67363v" path="res://Scenes/Fire_trap_CC.tscn" id="9_uhnj4"]
 [ext_resource type="Texture2D" uid="uid://c55jhvlasjxqb" path="res://Asset/Pixel Adventure 1/Free/Menu/Levels/02.png" id="10_5jii6"]
 [ext_resource type="Texture2D" uid="uid://bkcjn7l6ia747" path="res://Asset/door.png" id="10_42uki"]
@@ -25,6 +27,7 @@
 [ext_resource type="AudioStream" uid="uid://bacwj4yjcbrv7" path="res://Asset/field_theme_1.wav" id="20_e2piv"]
 [ext_resource type="PackedScene" uid="uid://d2mb1wg1m0n6j" path="res://Scenes/saw lv2.tscn" id="21_ijtdf"]
 [ext_resource type="FontFile" uid="uid://cau82t1dyajnn" path="res://Asset/brackeys_platformer_assets/fonts/PixelOperator8.ttf" id="23_sfey3"]
+[ext_resource type="PackedScene" uid="uid://bl8ffjwwmia5w" path="res://Scenes/gambler_lv_2.tscn" id="26_d42f2"]
 
 [sub_resource type="Animation" id="Animation_2mgoq"]
 length = 0.001
@@ -1099,6 +1102,16 @@ text = "Reset"
 icon = ExtResource("7_vcilj")
 script = ExtResource("8_bl0du")
 
+[node name="menu" type="Button" parent="Players/Player1/Camera2D"]
+offset_left = 3.2000237
+offset_top = -20.799976
+offset_right = 79.20003
+offset_bottom = 10.200024
+scale = Vector2(0.1956733, 0.19226873)
+text = "Menu"
+icon = ExtResource("8_kjoi8")
+script = ExtResource("9_nuasi")
+
 [node name="coin" type="Label" parent="Players/Player1/Camera2D"]
 offset_left = 3.2000246
 offset_top = -9.399976
@@ -1472,8 +1485,26 @@ theme_override_fonts/font = ExtResource("23_sfey3")
 theme_override_font_sizes/font_size = 60
 text = "Get at least 9 coins to pass to next level"
 
+[node name="Gambler lv 1" parent="." instance=ExtResource("26_d42f2")]
+position = Vector2(-671, 250)
+
+[node name="Gambler lv 2" parent="." instance=ExtResource("26_d42f2")]
+position = Vector2(607, 170)
+
+[node name="Gambler lv 3" parent="." instance=ExtResource("26_d42f2")]
+position = Vector2(419, 13)
+
+[node name="Gambler lv 4" parent="." instance=ExtResource("26_d42f2")]
+z_index = 2
+position = Vector2(197, -198)
+
+[node name="Gambler lv 5" parent="." instance=ExtResource("26_d42f2")]
+position = Vector2(-634, -83)
+
 [connection signal="pressed" from="Players/Player1/Camera2D/Reset" to="Players/Player1/Camera2D/Reset" method="_on_pressed"]
 [connection signal="pressed" from="Players/Player1/Camera2D/Reset" to="Map/Lava_killzone" method="_on_button_pressed"]
+[connection signal="pressed" from="Players/Player1/Camera2D/menu" to="Map/Lava_killzone" method="_on_button_pressed"]
+[connection signal="pressed" from="Players/Player1/Camera2D/menu" to="Players/Player1/Camera2D/menu" method="_on_pressed"]
 [connection signal="body_entered" from="Map/Lava_killzone" to="Map/Lava_killzone" method="_on_body_entered"]
 [connection signal="body_entered" from="level_finish" to="." method="_on_level_finish_body_entered"]
 [connection signal="body_entered" from="level_finish" to="level_finish" method="_on_body_entered"]

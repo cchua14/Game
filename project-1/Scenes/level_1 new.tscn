@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=4 uid="uid://bqpx0mdyabnv3"]
+[gd_scene load_steps=37 format=4 uid="uid://bqpx0mdyabnv3"]
 
 [ext_resource type="Script" uid="uid://yq3d678ger3j" path="res://Scripts/lv1main.gd" id="1_nl2tp"]
 [ext_resource type="Texture2D" uid="uid://behopkfrtc4u6" path="res://Asset/Pixel Adventure 1/Free/Background/Blue.png" id="1_s5dbj"]
@@ -16,12 +16,15 @@
 [ext_resource type="PackedScene" uid="uid://dbioynbwhv30r" path="res://Scenes/scene1 coin.tscn" id="12_52g8p"]
 [ext_resource type="Script" uid="uid://2l3d8l5q8gu2" path="res://Scripts/coin display lv2.gd" id="13_ocohq"]
 [ext_resource type="Script" uid="uid://bdm3ff5qj2oc0" path="res://Scenes/death.gd" id="14_7ha73"]
+[ext_resource type="Texture2D" uid="uid://d1d8n0mng8uok" path="res://Asset/Pixel Adventure 1/Free/Menu/Buttons/Back.png" id="14_yr1f0"]
+[ext_resource type="Script" uid="uid://b8js1d6np0bek" path="res://Scripts/back to menu lv1.gd" id="15_gwa31"]
 [ext_resource type="FontFile" uid="uid://lj733rg3xpgd" path="res://Asset/brackeys_platformer_assets/fonts/PixelOperator8-Bold.ttf" id="17_kp0mr"]
 [ext_resource type="Script" uid="uid://ywybkah44hjg" path="res://Scripts/lv_2_teleporter.gd" id="18_4x4fw"]
 [ext_resource type="Texture2D" uid="uid://bkcjn7l6ia747" path="res://Asset/door.png" id="18_7ql8f"]
 [ext_resource type="Texture2D" uid="uid://c55jhvlasjxqb" path="res://Asset/Pixel Adventure 1/Free/Menu/Levels/02.png" id="19_r83rk"]
 [ext_resource type="Texture2D" uid="uid://shndqdt17e6n" path="res://Asset/Pixel Adventure 1/Free/Menu/Levels/01.png" id="20_4x4fw"]
 [ext_resource type="AudioStream" uid="uid://bacwj4yjcbrv7" path="res://Asset/field_theme_1.wav" id="22_3pw0l"]
+[ext_resource type="PackedScene" uid="uid://c20nrdnuqqkyf" path="res://Scenes/gambler_lv_1.tscn" id="23_xt6do"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6444e"]
 texture = ExtResource("1_s5dbj")
@@ -1064,6 +1067,16 @@ text = "Reset"
 icon = ExtResource("11_7ha73")
 script = ExtResource("12_4c2qx")
 
+[node name="Reset2" type="Button" parent="Player/Character 1/Camera2D2"]
+offset_left = 7.0
+offset_top = -20.0
+offset_right = 83.0
+offset_bottom = 11.0
+scale = Vector2(0.1956733, 0.19226873)
+text = "Menu"
+icon = ExtResource("14_yr1f0")
+script = ExtResource("15_gwa31")
+
 [node name="coin" type="Label" parent="Player/Character 1/Camera2D2"]
 offset_left = 7.0
 offset_top = -8.0
@@ -1153,6 +1166,25 @@ texture = ExtResource("20_4x4fw")
 stream = ExtResource("22_3pw0l")
 autoplay = true
 
+[node name="Gambler lv 1" parent="." instance=ExtResource("23_xt6do")]
+position = Vector2(-671, 392)
+
+[node name="Gambler lv 2" parent="." instance=ExtResource("23_xt6do")]
+position = Vector2(-180, -45)
+
+[node name="Gambler lv 3" parent="." instance=ExtResource("23_xt6do")]
+position = Vector2(424, 292)
+
+[node name="Gambler lv 4" parent="." instance=ExtResource("23_xt6do")]
+position = Vector2(493, -46)
+
+[node name="Gambler lv 5" parent="." instance=ExtResource("23_xt6do")]
+position = Vector2(-560, -300)
+
+[node name="Gambler lv 6" parent="." instance=ExtResource("23_xt6do")]
+position = Vector2(601, -310)
+
 [connection signal="body_entered" from="Map/killzone" to="Map/killzone" method="_on_body_entered"]
 [connection signal="pressed" from="Player/Character 1/Camera2D2/Reset" to="Player/Character 1/Camera2D2/Reset" method="_on_pressed"]
+[connection signal="pressed" from="Player/Character 1/Camera2D2/Reset2" to="Player/Character 1/Camera2D2/Reset2" method="_on_pressed"]
 [connection signal="body_entered" from="lv 2 teleporter" to="lv 2 teleporter" method="_on_body_entered"]
