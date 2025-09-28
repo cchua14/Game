@@ -21,6 +21,10 @@ Main2="*res://Scripts/main2.gd"
 MainMenu="*res://Scripts/main_menu.gd"
 Lv1Main="*res://Scripts/lv1main.gd"
 
+[filesystem]
+
+import/blender/enabled=false
+
 [input]
 
 "Jump(W) player1 "={
